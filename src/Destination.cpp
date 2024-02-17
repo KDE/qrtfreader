@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "Destination.h"
-#include "rtfdebug.h"
+#include "qrtfreader_debug.h"
 
 #include <QStack>
 

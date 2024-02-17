@@ -4,7 +4,7 @@
 #include "PictDestination.h"
 
 #include "Reader.h"
-#include "rtfdebug.h"
+#include "qrtfreader_debug.h"
 #include <QBuffer>
 #include <QFile>
 #include <QImageReader>

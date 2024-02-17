@@ -5,6 +5,14 @@
 #   SPDX-License-Identifier: BSD-2-Clause
 #
 
+ecm_qt_declare_logging_category(debug_SRCS
+    HEADER qrtfreader_debug.h
+    IDENTIFIER lcRtf
+    CATEGORY_NAME qrtfreader
+    DESCRIPTION "QRtfReader"
+    EXPORT QRTFREADER
+)
+
 # To hide all the warnings from the generated itex2MML code
 if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_GNUC)
     add_definitions(-Wno-unused-parameter)
@@ -19,7 +27,6 @@ set_target_properties(QRtfReader PROPERTIES
 install(TARGETS QRtfReader ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 target_sources(QRtfReader PRIVATE
-    rtfdebug.cpp
     Reader.cpp
     ControlWord.cpp
     AbstractRtfOutput.cpp
@@ -52,6 +59,7 @@ target_sources(QRtfReader PRIVATE
     Token.cpp
     Tokenizer.cpp
     UserPropsDestination.cpp
+    ${debug_SRCS}
 )
 
 ecm_generate_export_header(QRtfReader
@@ -98,4 +106,10 @@ install(FILES
 install(EXPORT QRtfReaderTargets
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     FILE QRtfReaderTargets.cmake
+)
+
+ecm_qt_install_logging_categories(
+    EXPORT QRTFREADER
+    FILE qrtfreader.categories
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )

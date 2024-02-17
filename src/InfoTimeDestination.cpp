@@ -4,7 +4,7 @@
 #include "InfoTimeDestination.h"
 
 #include "Reader.h"
-#include "rtfdebug.h"
+#include "qrtfreader_debug.h"
 
 namespace QRtfReader
 {

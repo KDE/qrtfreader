@@ -4,7 +4,7 @@
 #include "Reader.h"
 #include "AbstractRtfOutput.h"
 #include "ControlWord.h"
-#include "rtfdebug.h"
+#include "qrtfreader_debug.h"
 
 #include "AuthorPcdataDestination.h"
 #include "CategoryPcdataDestination.h"
