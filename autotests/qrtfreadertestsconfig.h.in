@@ -1,0 +1,13 @@
+/*
+    SPDX-FileCopyrightText: 2024 Sergey Katunin <sulmpx60@yandex.ru>
+
+    SPDX-License-Identifier: BSD-2-Clause
+*/
+
+#ifndef QRTFREADERTESTSCONFIG_H
+#define QRTFREADERTESTSCONFIG_H
+
+#define TESTS_SAMPLE_FILES_PATH "@CMAKE_CURRENT_SOURCE_DIR@/samplefiles"
+#define TESTS_SAMPLE_CONFIGURED_FILES_PATH "@CMAKE_CURRENT_BINARY_DIR@/../autotests/samplefiles"
+
+#endif

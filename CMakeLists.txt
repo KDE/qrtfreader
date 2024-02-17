@@ -24,6 +24,8 @@ set(KDE_COMPILERSETTINGS_LEVEL 5.84.0) # set before including
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMGenerateHeaders)
 include(ECMGenerateExportHeader)
+include(ECMQtDeclareLoggingCategory)
+include(ECMAddTests)
 
 include(KDEClangFormat)
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
@@ -56,3 +58,8 @@ configure_package_config_file(
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 add_subdirectory(src)
+
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
+
