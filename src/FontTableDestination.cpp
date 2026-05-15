@@ -3,8 +3,8 @@
 
 #include "FontTableDestination.h"
 
+#include "Reader.h"
 #include "rtfdebug.h"
-#include "rtfreader.h"
 
 namespace
 {

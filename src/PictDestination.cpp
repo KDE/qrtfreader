@@ -3,8 +3,8 @@
 
 #include "PictDestination.h"
 
+#include "Reader.h"
 #include "rtfdebug.h"
-#include "rtfreader.h"
 #include <QBuffer>
 #include <QFile>
 #include <QImageReader>

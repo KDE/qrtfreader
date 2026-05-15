@@ -20,7 +20,7 @@ install(TARGETS QRtfReader ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 target_sources(QRtfReader PRIVATE
     rtfdebug.cpp
-    rtfreader.cpp
+    Reader.cpp
     controlword.cpp
     AbstractRtfOutput.cpp
     AuthorPcdataDestination.cpp
@@ -71,7 +71,7 @@ target_link_libraries(QRtfReader
 
 ecm_generate_headers(QRtfReader_HEADERS
     ORIGINAL CAMELCASE
-    HEADER_NAMES rtfreader
+    HEADER_NAMES Reader
                  TextDocumentRtfOutput
                  AbstractRtfOutput
                  FontTableEntry

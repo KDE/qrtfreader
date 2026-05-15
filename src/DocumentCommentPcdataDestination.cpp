@@ -3,7 +3,7 @@
 
 #include "DocumentCommentPcdataDestination.h"
 
-#include "rtfreader.h"
+#include "Reader.h"
 
 namespace QRtfReader
 {

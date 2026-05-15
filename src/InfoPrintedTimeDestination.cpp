@@ -3,7 +3,7 @@
 
 #include "InfoPrintedTimeDestination.h"
 
-#include "rtfreader.h"
+#include "Reader.h"
 
 namespace QRtfReader
 {

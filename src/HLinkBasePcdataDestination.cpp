@@ -3,7 +3,7 @@
 
 #include "HLinkBasePcdataDestination.h"
 
-#include "rtfreader.h"
+#include "Reader.h"
 
 namespace QRtfReader
 {

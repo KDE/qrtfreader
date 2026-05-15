@@ -3,7 +3,7 @@
 
 #include "GeneratorPcdataDestination.h"
 
-#include "rtfreader.h"
+#include "Reader.h"
 
 namespace QRtfReader
 {

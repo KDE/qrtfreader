@@ -3,7 +3,7 @@
 
 #include "OperatorPcdataDestination.h"
 
-#include "rtfreader.h"
+#include "Reader.h"
 
 namespace QRtfReader
 {

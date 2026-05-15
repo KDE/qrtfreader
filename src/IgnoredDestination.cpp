@@ -3,7 +3,7 @@
 
 #include "IgnoredDestination.h"
 
-#include "rtfreader.h"
+#include "Reader.h"
 
 namespace QRtfReader
 {
