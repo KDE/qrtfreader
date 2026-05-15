@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2008, 2011 Brad Hards <bradh@frogmouth.net>
 // SPDX-License-Identifier: BSD-2-Clause
 
-#include "controlword.h"
+#include "ControlWord.h"
 
 enum control_word_types {
     Symbol,

@@ -3,8 +3,8 @@
 
 #include "DocumentDestination.h"
 
+#include "ControlWord.h"
 #include "Reader.h"
-#include "controlword.h"
 #include "rtfdebug.h"
 
 namespace QRtfReader

@@ -3,7 +3,7 @@
 
 #include "Reader.h"
 #include "AbstractRtfOutput.h"
-#include "controlword.h"
+#include "ControlWord.h"
 #include "rtfdebug.h"
 
 #include "AuthorPcdataDestination.h"

@@ -21,7 +21,7 @@ install(TARGETS QRtfReader ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 target_sources(QRtfReader PRIVATE
     rtfdebug.cpp
     Reader.cpp
-    controlword.cpp
+    ControlWord.cpp
     AbstractRtfOutput.cpp
     AuthorPcdataDestination.cpp
     CategoryPcdataDestination.cpp
