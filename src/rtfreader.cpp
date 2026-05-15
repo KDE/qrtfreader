@@ -279,6 +279,18 @@ void Reader::parseDocument(Tokenizer &tokenizer)
             if (!controlWord.isKnown()) {
                 qCDebug(lcRtf) << "*** Unrecognised control word (not in spec 1.9.1): " << token.name;
             }
+
+            // LibreOffice put "*" token before this controlWord, so \ud destination
+            // and inner destinations will be ignored (for example \title inside \ud).
+            // But we want to keep inner content of this destination for metadata extraction.
+            //
+            // P.S Eventually unicode \ud inner data will rewrite latin encoding data
+            // from \upr that can be in wrong encoding.
+            if (token.name == "ud") {
+                nextSymbolMightBeDestination = true;
+                nextSymbolIsIgnorable = false;
+            }
+
             // qCDebug(lcRtf) << m_debugIndent << "got controlWord: " << token.name;
             // qCDebug(lcRtf) << m_debugIndent << "isDestination:" << controlWord.isDestination();
             // qCDebug(lcRtf) << m_debugIndent << "isIgnorable:" << nextSymbolIsIgnorable;
