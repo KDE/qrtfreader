@@ -27,6 +27,7 @@ public:
 
     void endGroup() override;
 
+    QString convertText(const QByteArray &text) const override;
     void appendText(const QByteArray &text) override;
     void appendText(const QString &text) override;
 

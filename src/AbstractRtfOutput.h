@@ -242,6 +242,7 @@ public:
     void addUserProp(const QString &propertyName, const QVariant &propertyValue);
 
     // TODO: consider adding default implementation for this
+    virtual QString convertText(const QByteArray &text) const = 0;
     virtual void appendText(const QByteArray &text) = 0;
     virtual void appendText(const QString &text) = 0;
     virtual void insertPar() = 0;

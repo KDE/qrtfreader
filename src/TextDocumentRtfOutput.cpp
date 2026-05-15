@@ -46,11 +46,15 @@ void TextDocumentRtfOutput::endGroup()
     m_cursor->setCharFormat(m_textCharFormatStack.top());
 }
 
-void TextDocumentRtfOutput::appendText(const QByteArray &text)
+QString TextDocumentRtfOutput::convertText(const QByteArray &text) const
 {
     static const QRegularExpression controlCharacters(QStringLiteral("[\\x00-\\x08\\x0B\\x0C\\x0E-\\x1F]"));
-    m_cursor->insertText(
-        (m_encoding != QStringLiteral("UTF-8") ? QStringDecoder(m_encoding).decode(text) : QString::fromLatin1(text)).remove(controlCharacters));
+    return (m_encoding != QStringLiteral("UTF-8") ? QStringDecoder(m_encoding).decode(text) : QString::fromLatin1(text)).remove(controlCharacters);
+}
+
+void TextDocumentRtfOutput::appendText(const QByteArray &text)
+{
+    m_cursor->insertText(this->convertText(text));
 }
 
 void TextDocumentRtfOutput::appendText(const QString &str)
