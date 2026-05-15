@@ -19,7 +19,7 @@ void GeneratorPcdataDestination::aboutToEndDestination()
     if (m_pcdata.endsWith(QLatin1Char(';'))) {
         // trim off the trailing semicolon
         m_pcdata.chop(1);
-        m_output->setGeneratorInformation(m_pcdata);
     }
+    m_output->setGeneratorInformation(m_pcdata);
 }
 }
