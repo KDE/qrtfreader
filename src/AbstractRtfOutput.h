@@ -337,25 +337,25 @@ private:
     QDateTime m_printed;
 
     // The total editing time for the document (from document meta-data, if any)
-    int m_totalEditingTime;
+    int m_totalEditingTime = -1;
 
     // The number of pages in the document (from document meta-data, if any)
-    int m_numberOfPages;
+    int m_numberOfPages = -1;
 
     // The number of words in the document (from document meta-data, if any)
-    int m_numberOfWords;
+    int m_numberOfWords = -1;
 
     // The number of characters in the document (from document meta-data, if any)
-    int m_numberOfCharacters;
+    int m_numberOfCharacters = -1;
 
     // The number of characters (without spaces) in the document (from document meta-data, if any)
-    int m_numberOfCharactersWithoutSpaces;
+    int m_numberOfCharactersWithoutSpaces = -1;
 
     // The version of the document (from document meta-data, if any)
-    int m_versionNumber;
+    int m_versionNumber = -1;
 
     // The internal version of the document (from document meta-data, if any)
-    int m_internalVersionNumber;
+    int m_internalVersionNumber = -1;
 
     // User properties dictionary (from document meta-data, if any)
     QHash<QString, QVariant> m_userProps;
