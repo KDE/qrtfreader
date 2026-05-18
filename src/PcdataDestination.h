@@ -7,11 +7,11 @@
 #include <QColor>
 #include <QString>
 
-#include "Destination.h"
+#include "DocumentDestination.h"
 #include "rtfreader_export.h"
 namespace RtfReader
 {
-class RTFREADER_EXPORT PcdataDestination : public Destination
+class RTFREADER_EXPORT PcdataDestination : public DocumentDestination
 {
 public:
     PcdataDestination(AbstractRtfOutput *output, const QString &name);
