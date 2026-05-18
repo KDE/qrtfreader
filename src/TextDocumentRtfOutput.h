@@ -11,12 +11,12 @@ class QTextCursor;
 class QTextDocument;
 class QTextImageFormat;
 
-#include "rtfreader_export.h"
+#include "qrtfreader_export.h"
 #include <QStack>
 #include <QTextCharFormat>
-namespace RtfReader
+namespace QRtfReader
 {
-class RTFREADER_EXPORT TextDocumentRtfOutput : public AbstractRtfOutput
+class QRTFREADER_EXPORT TextDocumentRtfOutput : public AbstractRtfOutput
 {
 public:
     explicit TextDocumentRtfOutput(QTextDocument *document);

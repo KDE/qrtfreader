@@ -9,13 +9,13 @@
 #include <QTextCharFormat>
 
 #include "AbstractRtfOutput.h"
-#include "rtfreader_export.h"
-namespace RtfReader
+#include "qrtfreader_export.h"
+namespace QRtfReader
 {
 /**
    A representation of a destination
 */
-class RTFREADER_EXPORT Destination
+class QRTFREADER_EXPORT Destination
 {
 public:
     Destination(AbstractRtfOutput *output, const QString &name);

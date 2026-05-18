@@ -4,10 +4,10 @@
 #ifndef RTFREADER_TOKEN_H
 #define RTFREADER_TOKEN_H
 
-#include "rtfreader_export.h"
+#include "qrtfreader_export.h"
 #include <QByteArray>
 #include <QString>
-namespace RtfReader
+namespace QRtfReader
 {
 enum TokenType {
     OpenGroup,
@@ -21,7 +21,7 @@ enum TokenType {
 /**
   RTF token
   */
-class RTFREADER_EXPORT Token
+class QRTFREADER_EXPORT Token
 {
 public: /* TODO: convert to getters / setters */
     void dump() const;

@@ -6,7 +6,7 @@
 #include "rtfdebug.h"
 #include "rtfreader.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 InfoDestination::InfoDestination(AbstractRtfOutput *output, const QString &name)
     : Destination(output, name)

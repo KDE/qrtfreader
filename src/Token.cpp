@@ -4,7 +4,7 @@
 #include "Token.h"
 #include "rtfdebug.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 void Token::dump() const
 {

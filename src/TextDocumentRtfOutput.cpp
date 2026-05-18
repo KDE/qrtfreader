@@ -12,7 +12,7 @@
 #include <QUrl>
 #include <QUuid>
 
-namespace RtfReader
+namespace QRtfReader
 {
 TextDocumentRtfOutput::TextDocumentRtfOutput(QTextDocument *document)
     : AbstractRtfOutput()

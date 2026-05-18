@@ -9,10 +9,10 @@
 #include <QVariant>
 
 #include "Destination.h"
-#include "rtfreader_export.h"
-namespace RtfReader
+#include "qrtfreader_export.h"
+namespace QRtfReader
 {
-class RTFREADER_EXPORT UserPropsDestination : public Destination
+class QRTFREADER_EXPORT UserPropsDestination : public Destination
 {
 public:
     UserPropsDestination(AbstractRtfOutput *output, const QString &name);

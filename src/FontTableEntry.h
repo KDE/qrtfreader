@@ -3,9 +3,9 @@
 
 #ifndef RTFREADER_FONTTABLEENTRY_H
 #define RTFREADER_FONTTABLEENTRY_H
-#include "rtfreader_export.h"
+#include "qrtfreader_export.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 enum FontFamily {
     Nil,
@@ -24,7 +24,7 @@ enum FontPitch {
     Variable = 2
 };
 
-class RTFREADER_EXPORT FontTableEntry
+class QRTFREADER_EXPORT FontTableEntry
 {
 public:
     FontTableEntry()

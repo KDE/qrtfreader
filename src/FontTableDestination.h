@@ -9,10 +9,10 @@
 
 #include "Destination.h"
 #include "FontTableEntry.h"
-#include "rtfreader_export.h"
-namespace RtfReader
+#include "qrtfreader_export.h"
+namespace QRtfReader
 {
-class RTFREADER_EXPORT FontTableDestination : public Destination
+class QRTFREADER_EXPORT FontTableDestination : public Destination
 {
 public:
     FontTableDestination(AbstractRtfOutput *output, const QString &name);

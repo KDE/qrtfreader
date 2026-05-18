@@ -4,9 +4,9 @@
 #include "AbstractRtfOutput.h"
 
 /**
-   Namespace for the public interface for the RtfReader classes
+   Namespace for the public interface for the QRtfReader classes
 */
-namespace RtfReader
+namespace QRtfReader
 {
 AbstractRtfOutput::AbstractRtfOutput() = default;
 

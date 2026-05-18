@@ -41,7 +41,7 @@ static constexpr CharsetEntry charsetToCodec[] = {
 
 }
 
-namespace RtfReader
+namespace QRtfReader
 {
 FontTableDestination::FontTableDestination(AbstractRtfOutput *output, const QString &name)
     : Destination(output, name)

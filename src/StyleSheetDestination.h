@@ -9,10 +9,10 @@
 
 #include "Destination.h"
 #include "StyleSheetTableEntry.h"
-#include "rtfreader_export.h"
-namespace RtfReader
+#include "qrtfreader_export.h"
+namespace QRtfReader
 {
-class RTFREADER_EXPORT StyleSheetDestination : public Destination
+class QRTFREADER_EXPORT StyleSheetDestination : public Destination
 {
 public:
     StyleSheetDestination(AbstractRtfOutput *output, const QString &name);

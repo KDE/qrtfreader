@@ -5,7 +5,7 @@
 #include "rtfdebug.h"
 #include <ctype.h>
 
-namespace RtfReader
+namespace QRtfReader
 {
 void Tokenizer::pullControlWord(Token &token)
 {

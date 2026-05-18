@@ -10,7 +10,7 @@
 #include <QImageReader>
 #include <QUuid>
 
-namespace RtfReader
+namespace QRtfReader
 {
 PictDestination::PictDestination(AbstractRtfOutput *output, const QString &name)
     : Destination(output, name)

@@ -5,7 +5,7 @@
 
 #include "rtfreader.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 IgnoredDestination::IgnoredDestination(AbstractRtfOutput *output, const QString &name)
     : Destination(output, name)

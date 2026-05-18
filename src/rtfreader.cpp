@@ -34,7 +34,7 @@
 #include <QTextCursor>
 #include <QUrl>
 
-namespace RtfReader
+namespace QRtfReader
 {
 Reader::Reader(QObject *parent)
     : QObject(parent)
@@ -227,7 +227,7 @@ void Reader::parseDocument(Tokenizer &tokenizer)
     bool nextSymbolMightBeDestination = false;
     bool nextSymbolIsIgnorable = false;
 
-    RtfReader::ControlWord controlWord(QLatin1String(""));
+    QRtfReader::ControlWord controlWord(QLatin1String(""));
 
     while (!atEndOfFile) {
         Token token = tokenizer.fetchToken();

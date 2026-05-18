@@ -3,15 +3,15 @@
 
 #pragma once
 
-#include "rtfreader_export.h"
+#include "qrtfreader_export.h"
 #include <QString>
-namespace RtfReader
+namespace QRtfReader
 {
 
 /**
    Representation of an RTF Control Word
 */
-class RTFREADER_EXPORT ControlWord
+class QRTFREADER_EXPORT ControlWord
 {
 public:
     /**

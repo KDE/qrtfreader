@@ -8,10 +8,10 @@
 #include <QString>
 
 #include "Destination.h"
-#include "rtfreader_export.h"
-namespace RtfReader
+#include "qrtfreader_export.h"
+namespace QRtfReader
 {
-class RTFREADER_EXPORT DocumentDestination : public Destination
+class QRTFREADER_EXPORT DocumentDestination : public Destination
 {
 public:
     DocumentDestination(AbstractRtfOutput *output, const QString &name);

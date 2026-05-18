@@ -8,10 +8,10 @@
 #include <QString>
 
 #include "InfoTimeDestination.h"
-#include "rtfreader_export.h"
-namespace RtfReader
+#include "qrtfreader_export.h"
+namespace QRtfReader
 {
-class RTFREADER_EXPORT InfoCreatedTimeDestination : public InfoTimeDestination
+class QRTFREADER_EXPORT InfoCreatedTimeDestination : public InfoTimeDestination
 {
 public:
     InfoCreatedTimeDestination(AbstractRtfOutput *output, const QString &name);

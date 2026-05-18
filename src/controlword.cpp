@@ -1836,7 +1836,7 @@ const static struct control_word_known known_control_words[] = {{"\'", Symbol},
                                                                 {"zwnj", Symbol},
                                                                 {nullptr, Symbol}};
 
-namespace RtfReader
+namespace QRtfReader
 {
 
 ControlWord::ControlWord(const QString &name)

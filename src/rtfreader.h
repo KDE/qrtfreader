@@ -14,11 +14,11 @@
 
 #include "RtfGroupState.h"
 #include "Tokenizer.h"
-#include "rtfreader_export.h"
+#include "qrtfreader_export.h"
 /**
-   Namespace for the public interface for the RtfReader classes
+   Namespace for the public interface for the QRtfReader classes
 */
-namespace RtfReader
+namespace QRtfReader
 {
 class AbstractRtfOutput;
 class RtfProperty;
@@ -32,7 +32,7 @@ class Destination;
 
    TODO: add spec reference
 */
-class RTFREADER_EXPORT Reader : public QObject
+class QRTFREADER_EXPORT Reader : public QObject
 {
     Q_OBJECT
 public:
@@ -80,8 +80,8 @@ public:
     ////////////////////////////////////////////////
     void startInfo();
 
-    void todo(RtfReader::RtfProperty *property);
-    void todoDest(RtfReader::RtfProperty *property);
+    void todo(QRtfReader::RtfProperty *property);
+    void todoDest(QRtfReader::RtfProperty *property);
 
 private:
     /////////////////////////////////////////////////

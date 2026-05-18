@@ -7,7 +7,7 @@
 #include "rtfdebug.h"
 #include "rtfreader.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 DocumentDestination::DocumentDestination(AbstractRtfOutput *output, const QString &name)
     : Destination(output, name)

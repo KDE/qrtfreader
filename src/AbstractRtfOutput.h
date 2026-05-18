@@ -12,16 +12,16 @@
 
 #include "FontTableEntry.h"
 #include "StyleSheetTableEntry.h"
-#include "rtfreader_export.h"
+#include "qrtfreader_export.h"
 /**
-   Namespace for the public interface for the RtfReader classes
+   Namespace for the public interface for the QRtfReader classes
 */
-namespace RtfReader
+namespace QRtfReader
 {
 /**
 Abstract output strategy for RTF Parser
 */
-class RTFREADER_EXPORT AbstractRtfOutput
+class QRTFREADER_EXPORT AbstractRtfOutput
 {
 public:
     AbstractRtfOutput();

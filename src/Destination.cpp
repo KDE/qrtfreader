@@ -6,7 +6,7 @@
 
 #include <QStack>
 
-namespace RtfReader
+namespace QRtfReader
 {
 Destination::Destination(AbstractRtfOutput *output, const QString &name)
     : m_name(name)

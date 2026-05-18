@@ -5,7 +5,7 @@
 
 #include "rtfreader.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 InfoRevisedTimeDestination::InfoRevisedTimeDestination(AbstractRtfOutput *output, const QString &name)
     : InfoTimeDestination(output, name)

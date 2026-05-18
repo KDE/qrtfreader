@@ -5,7 +5,7 @@
 
 #include "rtfreader.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 CommentPcdataDestination::CommentPcdataDestination(AbstractRtfOutput *output, const QString &name)
     : PcdataDestination(output, name)

@@ -7,7 +7,7 @@
 #include "rtfdebug.h"
 #include "rtfreader.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 
 StyleSheetDestination::StyleSheetDestination(AbstractRtfOutput *output, const QString &name)

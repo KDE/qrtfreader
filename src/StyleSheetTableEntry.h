@@ -3,8 +3,8 @@
 
 #ifndef RTFREADER_STYLESHEETTABLEENTRY_H
 #define RTFREADER_STYLESHEETTABLEENTRY_H
-#include "rtfreader_export.h"
-namespace RtfReader
+#include "qrtfreader_export.h"
+namespace QRtfReader
 {
 enum TextAlignment {
     LeftAligned,
@@ -14,7 +14,7 @@ enum TextAlignment {
     Distributed
 };
 
-class RTFREADER_EXPORT StyleSheetTableEntry
+class QRTFREADER_EXPORT StyleSheetTableEntry
 {
 public:
     StyleSheetTableEntry()

@@ -6,14 +6,14 @@
 
 #include "Token.h"
 
-#include "rtfreader_export.h"
+#include "qrtfreader_export.h"
 #include <QFile>
-namespace RtfReader
+namespace QRtfReader
 {
 /**
   RTF tokenizer
   */
-class RTFREADER_EXPORT Tokenizer
+class QRTFREADER_EXPORT Tokenizer
 {
 public:
     explicit Tokenizer(QFile *inputDevice)

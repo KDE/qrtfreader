@@ -6,7 +6,7 @@
 #include "rtfdebug.h"
 #include "rtfreader.h"
 
-namespace RtfReader
+namespace QRtfReader
 {
 ColorTableDestination::ColorTableDestination(AbstractRtfOutput *output, const QString &name)
     : Destination(output, name)

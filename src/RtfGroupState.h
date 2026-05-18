@@ -3,10 +3,10 @@
 
 #ifndef RTFREADER_RTFGROUPSTATE_H
 #define RTFREADER_RTFGROUPSTATE_H
-#include "rtfreader_export.h"
-namespace RtfReader
+#include "qrtfreader_export.h"
+namespace QRtfReader
 {
-class RTFREADER_EXPORT RtfGroupState
+class QRTFREADER_EXPORT RtfGroupState
 {
 public:
     RtfGroupState()
