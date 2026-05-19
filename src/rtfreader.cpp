@@ -227,7 +227,7 @@ void Reader::parseDocument(Tokenizer &tokenizer)
     bool nextSymbolMightBeDestination = false;
     bool nextSymbolIsIgnorable = false;
 
-    RtfReader::ControlWord controlWord(QStringLiteral(""));
+    RtfReader::ControlWord controlWord(QLatin1String(""));
 
     while (!atEndOfFile) {
         Token token = tokenizer.fetchToken();
