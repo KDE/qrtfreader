@@ -25,6 +25,7 @@
 #include "ManagerPcdataDestination.h"
 #include "OperatorPcdataDestination.h"
 #include "PictDestination.h"
+#include "RtfGroupState.h"
 #include "StyleSheetDestination.h"
 #include "SubjectPcdataDestination.h"
 #include "TitlePcdataDestination.h"
@@ -210,7 +211,7 @@ void Reader::changeDestination(const QString &destinationName)
 
 void Reader::parseDocument(Tokenizer &tokenizer)
 {
-    class RtfGroupState state;
+    RtfGroupState state;
 
     // Push an end-of-file marker onto the stack
     state.endOfFile = true;
