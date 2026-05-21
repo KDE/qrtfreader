@@ -29,6 +29,7 @@
 #include "StyleSheetDestination.h"
 #include "SubjectPcdataDestination.h"
 #include "TitlePcdataDestination.h"
+#include "Tokenizer.h"
 #include "UserPropsDestination.h"
 
 #include <QStack>

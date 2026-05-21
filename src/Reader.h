@@ -12,7 +12,6 @@
 #include <QTextDocument>
 #include <QTextFormat>
 
-#include "Tokenizer.h"
 #include "qrtfreader_export.h"
 /**
    Namespace for the public interface for the QRtfReader classes
@@ -23,6 +22,7 @@ class AbstractRtfOutput;
 class RtfProperty;
 class Destination;
 class RtfGroupState;
+class Tokenizer;
 
 /**
    Reader for RTF formatted documents
