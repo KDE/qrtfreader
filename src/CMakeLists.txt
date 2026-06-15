@@ -1,5 +1,5 @@
 #
-#   SPDX-FileCopyrightText: 2010 Brad Hards <bradh@frogmouth.net>    
+#   SPDX-FileCopyrightText: 2010 Brad Hards <bradh@frogmouth.net>
 #   SPDX-FileCopyrightText: 2024 Sergey Katunin <sulmpx60@yandex.ru>
 #
 #   SPDX-License-Identifier: BSD-2-Clause
@@ -24,7 +24,6 @@ set_target_properties(QRtfReader PROPERTIES
     SOVERSION   ${QRTFREADER_SOVERSION}
     EXPORT_NAME QRtfReader
 )
-install(TARGETS QRtfReader ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 target_sources(QRtfReader PRIVATE
     Reader.cpp
