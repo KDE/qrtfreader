@@ -27,37 +27,37 @@ set_target_properties(QRtfReader PROPERTIES
 
 target_sources(QRtfReader PRIVATE
     Reader.cpp
-    ControlWord.cpp
-    AbstractRtfOutput.cpp
-    AuthorPcdataDestination.cpp
-    CategoryPcdataDestination.cpp
-    ColorTableDestination.cpp
-    CommentPcdataDestination.cpp
-    CompanyPcdataDestination.cpp
-    Destination.cpp
-    DocumentCommentPcdataDestination.cpp
-    DocumentDestination.cpp
-    FontTableDestination.cpp
-    GeneratorPcdataDestination.cpp
-    HLinkBasePcdataDestination.cpp
-    IgnoredDestination.cpp
-    InfoDestination.cpp
-    InfoTimeDestination.cpp
-    InfoCreatedTimeDestination.cpp
-    InfoPrintedTimeDestination.cpp
-    InfoRevisedTimeDestination.cpp
-    KeywordsPcdataDestination.cpp
-    ManagerPcdataDestination.cpp
-    OperatorPcdataDestination.cpp
-    PcdataDestination.cpp
-    PictDestination.cpp
-    SubjectPcdataDestination.cpp
-    StyleSheetDestination.cpp
     TextDocumentRtfOutput.cpp
-    TitlePcdataDestination.cpp
-    Token.cpp
-    Tokenizer.cpp
-    UserPropsDestination.cpp
+    AbstractRtfOutput.cpp
+    private/ControlWord.cpp
+    private/AuthorPcdataDestination.cpp
+    private/CategoryPcdataDestination.cpp
+    private/ColorTableDestination.cpp
+    private/CommentPcdataDestination.cpp
+    private/CompanyPcdataDestination.cpp
+    private/Destination.cpp
+    private/DocumentCommentPcdataDestination.cpp
+    private/DocumentDestination.cpp
+    private/FontTableDestination.cpp
+    private/GeneratorPcdataDestination.cpp
+    private/HLinkBasePcdataDestination.cpp
+    private/IgnoredDestination.cpp
+    private/InfoDestination.cpp
+    private/InfoTimeDestination.cpp
+    private/InfoCreatedTimeDestination.cpp
+    private/InfoPrintedTimeDestination.cpp
+    private/InfoRevisedTimeDestination.cpp
+    private/KeywordsPcdataDestination.cpp
+    private/ManagerPcdataDestination.cpp
+    private/OperatorPcdataDestination.cpp
+    private/PcdataDestination.cpp
+    private/PictDestination.cpp
+    private/SubjectPcdataDestination.cpp
+    private/StyleSheetDestination.cpp
+    private/TitlePcdataDestination.cpp
+    private/Token.cpp
+    private/Tokenizer.cpp
+    private/UserPropsDestination.cpp
     ${debug_SRCS}
 )
 
