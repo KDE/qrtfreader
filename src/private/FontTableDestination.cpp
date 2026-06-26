@@ -56,23 +56,23 @@ void FontTableDestination::handleControlWord(const QByteArray &controlWord, bool
     if (controlWord == "f") {
         m_currentFontTableIndex = value;
     } else if (controlWord == "froman") {
-        m_fontTableEntry.setFontFamily(Roman);
+        m_fontTableEntry.setFontFamily(FontFamily::Roman);
     } else if (controlWord == "fswiss") {
-        m_fontTableEntry.setFontFamily(Swiss);
+        m_fontTableEntry.setFontFamily(FontFamily::Swiss);
     } else if (controlWord == "fnil") {
-        m_fontTableEntry.setFontFamily(Nil);
+        m_fontTableEntry.setFontFamily(FontFamily::Nil);
     } else if (controlWord == "fmodern") {
-        m_fontTableEntry.setFontFamily(Modern);
+        m_fontTableEntry.setFontFamily(FontFamily::Modern);
     } else if (controlWord == "fscript") {
-        m_fontTableEntry.setFontFamily(Script);
+        m_fontTableEntry.setFontFamily(FontFamily::Script);
     } else if (controlWord == "fdecor") {
-        m_fontTableEntry.setFontFamily(Decor);
+        m_fontTableEntry.setFontFamily(FontFamily::Decor);
     } else if (controlWord == "ftech") {
-        m_fontTableEntry.setFontFamily(Tech);
+        m_fontTableEntry.setFontFamily(FontFamily::Tech);
     } else if (controlWord == "fbidi") {
-        m_fontTableEntry.setFontFamily(Bidi);
+        m_fontTableEntry.setFontFamily(FontFamily::Bidi);
     } else if (controlWord == "fprq") {
-        m_fontTableEntry.setFontPitch(static_cast<enum FontPitch>(value));
+        m_fontTableEntry.setFontPitch(static_cast<FontPitch>(value));
     } else if (controlWord == "fcharset") {
         for (const auto &entry : charsetToCodec) {
             if (entry.id == value) {

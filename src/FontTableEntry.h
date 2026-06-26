@@ -3,11 +3,15 @@
 
 #ifndef RTFREADER_FONTTABLEENTRY_H
 #define RTFREADER_FONTTABLEENTRY_H
+
+#include <QSharedDataPointer>
+#include <QString>
+
 #include "qrtfreader_export.h"
 
 namespace QRtfReader
 {
-enum FontFamily {
+enum class FontFamily {
     Nil,
     Roman,
     Swiss,
@@ -18,66 +22,35 @@ enum FontFamily {
     Bidi
 };
 
-enum FontPitch {
+enum class FontPitch {
     Default = 0,
     Fixed = 1,
     Variable = 2
 };
-
+class FontTableEntryPrivate;
 class QRTFREADER_EXPORT FontTableEntry
 {
 public:
-    FontTableEntry()
-        : m_fontFamily(Nil)
-        , m_fontPitch(Default)
-    {
-    }
+    FontTableEntry();
+    FontTableEntry(const FontTableEntry &);
+    virtual ~FontTableEntry();
 
-    enum FontFamily fontFamily() const
-    {
-        return m_fontFamily;
-    }
+    FontTableEntry &operator=(const FontTableEntry &);
 
-    void setFontFamily(enum FontFamily fontFamily)
-    {
-        m_fontFamily = fontFamily;
-    }
+    FontFamily fontFamily() const;
+    void setFontFamily(FontFamily fontFamily);
 
-    enum FontPitch fontPitch() const
-    {
-        return m_fontPitch;
-    }
+    FontPitch fontPitch() const;
+    void setFontPitch(FontPitch fontPitch);
 
-    void setFontPitch(enum FontPitch fontPitch)
-    {
-        m_fontPitch = fontPitch;
-    }
+    QString fontName() const;
+    void setFontName(const QString &fontName);
 
-    QString fontName() const
-    {
-        return m_fontName;
-    }
+    QString encoding() const;
+    void setEncoding(const QString &encoding);
 
-    void setFontName(const QString &fontName)
-    {
-        m_fontName = fontName;
-    }
-
-    QString encoding() const
-    {
-        return m_encoding;
-    }
-
-    void setEncoding(const QString &encoding)
-    {
-        m_encoding = encoding;
-    }
-
-protected:
-    enum FontFamily m_fontFamily;
-    enum FontPitch m_fontPitch;
-    QString m_fontName;
-    QString m_encoding;
+private:
+    QSharedDataPointer<FontTableEntryPrivate> d;
 };
 }
 
