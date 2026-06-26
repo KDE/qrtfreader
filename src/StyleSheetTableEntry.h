@@ -4,94 +4,49 @@
 #ifndef RTFREADER_STYLESHEETTABLEENTRY_H
 #define RTFREADER_STYLESHEETTABLEENTRY_H
 #include "qrtfreader_export.h"
+
+#include <QSharedDataPointer>
+#include <Qt>
+
 namespace QRtfReader
 {
-enum TextAlignment {
+enum class TextAlignment {
     LeftAligned,
     CentreAligned,
     RightAligned,
     Justified,
     Distributed
 };
-
+class StyleSheetTableEntryPrivate;
 class QRTFREADER_EXPORT StyleSheetTableEntry
 {
 public:
-    StyleSheetTableEntry()
-        : m_textAlignment(LeftAligned)
-        , m_leftIndent(0)
-        , m_rightIndent(0)
-        , m_layoutDirection(Qt::LeftToRight)
-    {
-    }
+    StyleSheetTableEntry();
+    StyleSheetTableEntry(const StyleSheetTableEntry &);
+    virtual ~StyleSheetTableEntry();
 
-    enum TextAlignment textAlignment() const
-    {
-        return m_textAlignment;
-    }
+    StyleSheetTableEntry &operator=(const StyleSheetTableEntry &);
 
-    void setTextAlignment(enum TextAlignment textAlignment)
-    {
-        m_textAlignment = textAlignment;
-    }
+    TextAlignment textAlignment() const;
+    void setTextAlignment(TextAlignment textAlignment);
 
-    int leftIndent() const
-    {
-        return m_leftIndent;
-    }
+    int leftIndent() const;
+    void setLeftIndent(const int leftIndent);
 
-    void setLeftIndent(const int leftIndent)
-    {
-        m_leftIndent = leftIndent;
-    }
+    int rightIndent() const;
+    void setRightIndent(const int rightIndent);
 
-    int rightIndent() const
-    {
-        return m_rightIndent;
-    }
+    int topMargin() const;
+    void setTopMargin(const int topMargin);
 
-    void setRightIndent(const int rightIndent)
-    {
-        m_rightIndent = rightIndent;
-    }
+    Qt::LayoutDirection layoutDirection() const;
+    void setLayoutDirection(const Qt::LayoutDirection layoutDirection);
 
-    int topMargin() const
-    {
-        return m_topMargin;
-    }
+    QString styleName() const;
+    void setStyleName(const QString &styleName);
 
-    void setTopMargin(const int topMargin)
-    {
-        m_topMargin = topMargin;
-    }
-
-    Qt::LayoutDirection layoutDirection() const
-    {
-        return m_layoutDirection;
-    }
-
-    void setLayoutDirection(const Qt::LayoutDirection layoutDirection)
-    {
-        m_layoutDirection = layoutDirection;
-    }
-
-    QString styleName() const
-    {
-        return m_styleName;
-    }
-
-    void setStyleName(const QString &styleName)
-    {
-        m_styleName = styleName;
-    }
-
-protected:
-    QString m_styleName;
-    enum TextAlignment m_textAlignment;
-    int m_leftIndent;
-    int m_rightIndent;
-    Qt::LayoutDirection m_layoutDirection;
-    int m_topMargin;
+private:
+    QSharedDataPointer<StyleSheetTableEntryPrivate> d;
 };
 }
 

@@ -21,7 +21,7 @@ StyleSheetDestination::~StyleSheetDestination() = default;
 void StyleSheetDestination::handleControlWord(const QByteArray &controlWord, bool hasValue, const int value)
 {
     if (controlWord == "ql") {
-        m_style.setTextAlignment(LeftAligned);
+        m_style.setTextAlignment(TextAlignment::LeftAligned);
     } else if ((controlWord == "li") && hasValue) {
         m_style.setLeftIndent(value);
     } else if ((controlWord == "ri") && hasValue) {
