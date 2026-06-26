@@ -4,10 +4,10 @@
 #ifndef RTFREADER_INFOPRINTEDTIMEDESTINATION_H
 #define RTFREADER_INFOPRINTEDTIMEDESTINATION_H
 
-#include <QColor>
+#include "InfoTimeDestination_p.h"
+
 #include <QString>
 
-#include "InfoTimeDestination_p.h"
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {

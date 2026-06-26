@@ -4,9 +4,10 @@
 #ifndef RTFREADER_TOKEN_H
 #define RTFREADER_TOKEN_H
 
-#include "qrtfreader_export.h"
 #include <QByteArray>
 #include <QString>
+
+#include "qrtfreader_export.h"
 namespace QRtfReader
 {
 enum TokenType {

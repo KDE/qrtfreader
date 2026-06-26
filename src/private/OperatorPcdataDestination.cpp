@@ -3,8 +3,6 @@
 
 #include "OperatorPcdataDestination_p.h"
 
-#include "Reader.h"
-
 namespace QRtfReader
 {
 OperatorPcdataDestination::OperatorPcdataDestination(AbstractRtfOutput *output, const QString &name)

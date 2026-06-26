@@ -3,8 +3,9 @@
 
 #pragma once
 
-#include "qrtfreader_export.h"
 #include <QString>
+
+#include "qrtfreader_export.h"
 namespace QRtfReader
 {
 

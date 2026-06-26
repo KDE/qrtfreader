@@ -1,14 +1,15 @@
 // SPDX-FileCopyrightText: 2010 Brad Hards <bradh@frogmouth.net>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
+#include "TextDocumentRtfOutput.h"
+#include "private/TextDocumentRtfOutput_p.h"
+
 #include <QDebug>
 #include <QRegularExpression>
 #include <QTextCursor>
 #include <QTextDocument>
 #include <QUrl>
 
-#include "TextDocumentRtfOutput.h"
-#include "private/TextDocumentRtfOutput_p.h"
 #include "qrtfreader_debug.h"
 
 namespace QRtfReader

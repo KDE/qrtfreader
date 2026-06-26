@@ -6,12 +6,14 @@
 
 #include "AbstractRtfOutput.h"
 
+#include <QStack>
+#include <QTextCharFormat>
+
+#include "qrtfreader_export.h"
+
 class QTextCursor;
 class QTextDocument;
 
-#include "qrtfreader_export.h"
-#include <QStack>
-#include <QTextCharFormat>
 namespace QRtfReader
 {
 class QRTFREADER_EXPORT TextDocumentRtfOutputPrivate

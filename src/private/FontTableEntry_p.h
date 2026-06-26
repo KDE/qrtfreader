@@ -4,10 +4,10 @@
 #ifndef RTFREADER_FONTTABLEENTRY_P_H
 #define RTFREADER_FONTTABLEENTRY_P_H
 
+#include "FontTableEntry.h"
+
 #include <QSharedData>
 #include <QString>
-
-#include "FontTableEntry.h"
 
 #include "qrtfreader_export.h"
 

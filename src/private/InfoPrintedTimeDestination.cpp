@@ -3,8 +3,6 @@
 
 #include "InfoPrintedTimeDestination_p.h"
 
-#include "Reader.h"
-
 namespace QRtfReader
 {
 InfoPrintedTimeDestination::InfoPrintedTimeDestination(AbstractRtfOutput *output, const QString &name)

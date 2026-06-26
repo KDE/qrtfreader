@@ -2,9 +2,8 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "Destination_p.h"
-#include "qrtfreader_debug.h"
 
-#include <QStack>
+#include "qrtfreader_debug.h"
 
 namespace QRtfReader
 {

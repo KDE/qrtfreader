@@ -4,11 +4,12 @@
 #ifndef RTFREADER_FONTTABLEDESTINATION_H
 #define RTFREADER_FONTTABLEDESTINATION_H
 
-#include <QColor>
-#include <QString>
-
 #include "Destination_p.h"
 #include "FontTableEntry.h"
+
+#include <QByteArray>
+#include <QString>
+
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {

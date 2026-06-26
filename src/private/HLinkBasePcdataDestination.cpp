@@ -3,8 +3,6 @@
 
 #include "HLinkBasePcdataDestination_p.h"
 
-#include "Reader.h"
-
 namespace QRtfReader
 {
 HLinkBasePcdataDestination::HLinkBasePcdataDestination(AbstractRtfOutput *output, const QString &name)

@@ -4,10 +4,10 @@
 #ifndef RTFREADER_AUTHORPCDATADESTINATION_H
 #define RTFREADER_AUTHORPCDATADESTINATION_H
 
-#include <QColor>
+#include "PcdataDestination_p.h"
+
 #include <QString>
 
-#include "PcdataDestination_p.h"
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {

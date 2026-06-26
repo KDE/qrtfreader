@@ -3,12 +3,10 @@
 
 #include "PictDestination_p.h"
 
-#include "Reader.h"
-#include "qrtfreader_debug.h"
 #include <QBuffer>
-#include <QFile>
 #include <QImageReader>
-#include <QUuid>
+
+#include "qrtfreader_debug.h"
 
 namespace QRtfReader
 {

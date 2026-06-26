@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "Tokenizer_p.h"
+
 #include "qrtfreader_debug.h"
 #include <ctype.h>
 

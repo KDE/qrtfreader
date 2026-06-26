@@ -4,11 +4,13 @@
 #ifndef RTFREADER_STYLESHEETDESTINATION_H
 #define RTFREADER_STYLESHEETDESTINATION_H
 
+#include "StyleSheetTableEntry.h"
+
+#include "Destination_p.h"
+
 #include <QColor>
 #include <QString>
 
-#include "Destination_p.h"
-#include "StyleSheetTableEntry.h"
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {

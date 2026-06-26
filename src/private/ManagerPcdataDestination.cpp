@@ -3,8 +3,6 @@
 
 #include "ManagerPcdataDestination_p.h"
 
-#include "Reader.h"
-
 namespace QRtfReader
 {
 ManagerPcdataDestination::ManagerPcdataDestination(AbstractRtfOutput *output, const QString &name)

@@ -4,10 +4,11 @@
 #ifndef RTFREADER_STYLESHEETTABLEENTRY_P_H
 #define RTFREADER_STYLESHEETTABLEENTRY_P_H
 
+#include "StyleSheetTableEntry.h"
+
 #include <QSharedData>
 #include <QString>
 
-#include "StyleSheetTableEntry.h"
 #include "qrtfreader_export.h"
 
 namespace QRtfReader

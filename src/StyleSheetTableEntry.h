@@ -3,10 +3,11 @@
 
 #ifndef RTFREADER_STYLESHEETTABLEENTRY_H
 #define RTFREADER_STYLESHEETTABLEENTRY_H
-#include "qrtfreader_export.h"
 
 #include <QSharedDataPointer>
 #include <Qt>
+
+#include "qrtfreader_export.h"
 
 namespace QRtfReader
 {

@@ -4,11 +4,11 @@
 #ifndef RTFREADER_DESTINATION_H
 #define RTFREADER_DESTINATION_H
 
-#include <QDebug>
-#include <QString>
-#include <QTextCharFormat>
-
 #include "AbstractRtfOutput.h"
+
+#include <QByteArray>
+#include <QString>
+
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {

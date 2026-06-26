@@ -3,8 +3,6 @@
 
 #include "KeywordsPcdataDestination_p.h"
 
-#include "Reader.h"
-
 namespace QRtfReader
 {
 KeywordsPcdataDestination::KeywordsPcdataDestination(AbstractRtfOutput *output, const QString &name)

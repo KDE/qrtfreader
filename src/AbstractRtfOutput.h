@@ -4,14 +4,15 @@
 #ifndef RTFREADER_ABSTRACTRTFOUTPUT_H
 #define RTFREADER_ABSTRACTRTFOUTPUT_H
 
+#include "FontTableEntry.h"
+#include "StyleSheetTableEntry.h"
+
 #include <QColor>
 #include <QDateTime>
 #include <QString>
 #include <QTextImageFormat>
 #include <QVariant>
 
-#include "FontTableEntry.h"
-#include "StyleSheetTableEntry.h"
 #include "qrtfreader_export.h"
 /**
    Namespace for the public interface for the QRtfReader classes

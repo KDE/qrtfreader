@@ -3,8 +3,6 @@
 
 #include "GeneratorPcdataDestination_p.h"
 
-#include "Reader.h"
-
 namespace QRtfReader
 {
 GeneratorPcdataDestination::GeneratorPcdataDestination(AbstractRtfOutput *output, const QString &name)

@@ -6,8 +6,9 @@
 
 #include "Token_p.h"
 
-#include "qrtfreader_export.h"
 #include <QFile>
+
+#include "qrtfreader_export.h"
 namespace QRtfReader
 {
 /**

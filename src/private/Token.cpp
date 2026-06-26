@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "Token_p.h"
+
 #include "qrtfreader_debug.h"
 
 namespace QRtfReader

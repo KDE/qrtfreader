@@ -3,7 +3,6 @@
 
 #include "ColorTableDestination_p.h"
 
-#include "Reader.h"
 #include "qrtfreader_debug.h"
 
 namespace QRtfReader
