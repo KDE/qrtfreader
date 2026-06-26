@@ -52,10 +52,10 @@ void StyleSheetDestination::handlePlainText(const QByteArray &plainText)
         m_output->insertStyleSheetTableEntry(m_currentStyleHandleNumber, m_style);
     } else if (plainText.endsWith(";")) {
         // probably a style name with a terminating delimiter
-        int delimiterPosition = plainText.indexOf(";");
+        const int delimiterPosition = plainText.indexOf(";");
         if (delimiterPosition == (plainText.length() - 1)) {
             // It is at the end, chop it off
-            QString styleName = QString::fromUtf8(plainText.left(delimiterPosition));
+            const QString styleName = QString::fromUtf8(plainText.left(delimiterPosition));
             m_style.setStyleName(styleName);
             m_output->insertStyleSheetTableEntry(m_currentStyleHandleNumber, m_style);
         } else {

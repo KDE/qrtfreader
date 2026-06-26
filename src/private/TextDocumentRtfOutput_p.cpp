@@ -28,8 +28,8 @@ TextDocumentRtfOutputPrivate::~TextDocumentRtfOutputPrivate()
 
 qreal TextDocumentRtfOutputPrivate::pixelsFromTwips(const int twips) const
 {
-    qreal inches = twips / 1440.0;
-    qreal pixels = inches * 96.0;
+    const qreal inches = twips / 1440.0;
+    const qreal pixels = inches * 96.0;
     return pixels;
 }
 
@@ -39,7 +39,7 @@ void TextDocumentRtfOutputPrivate::startGroup()
         // TODO: think harder about how to deal with default font cases.
         setFont(m_defaultFontIndex);
     }
-    QTextCharFormat charFormat = m_textCharFormatStack.top(); // inherit all current properties
+    const QTextCharFormat charFormat = m_textCharFormatStack.top(); // inherit all current properties
     m_textCharFormatStack.push(charFormat);
 }
 
@@ -51,7 +51,7 @@ void TextDocumentRtfOutputPrivate::endGroup()
 
 void TextDocumentRtfOutputPrivate::setForegroundColour(const int colourIndex)
 {
-    QColor colour = m_colourTable.value(colourIndex);
+    const QColor colour = m_colourTable.value(colourIndex);
     if (colour.isValid()) {
         m_textCharFormatStack.top().setForeground(colour);
     } else {
@@ -62,7 +62,7 @@ void TextDocumentRtfOutputPrivate::setForegroundColour(const int colourIndex)
 
 void TextDocumentRtfOutputPrivate::setHighlightColour(const int colourIndex)
 {
-    QColor colour = m_colourTable.value(colourIndex);
+    const QColor colour = m_colourTable.value(colourIndex);
     if (colour.isValid()) {
         m_textCharFormatStack.top().setBackground(colour);
     } else {
@@ -73,7 +73,7 @@ void TextDocumentRtfOutputPrivate::setHighlightColour(const int colourIndex)
 
 void TextDocumentRtfOutputPrivate::setParagraphPatternBackgroundColour(const int colourIndex)
 {
-    QColor colour = m_colourTable.value(colourIndex);
+    const QColor colour = m_colourTable.value(colourIndex);
     if (colour.isValid()) {
         m_paragraphFormat.setBackground(colour);
     } else {
@@ -88,7 +88,7 @@ void TextDocumentRtfOutputPrivate::setFont(const int fontIndex)
         qCDebug(lcRtf) << "attempted to select fontIndex" << fontIndex << "not in the font table";
         return;
     }
-    FontTableEntry fontEntry = m_fontTable.value(fontIndex);
+    const FontTableEntry fontEntry = m_fontTable.value(fontIndex);
     qCDebug(lcRtf) << "selecting font:" << fontEntry.fontName();
     m_textCharFormatStack.top().setFontFamilies(QStringList{fontEntry.fontName()});
     m_cursor->setCharFormat(m_textCharFormatStack.top());

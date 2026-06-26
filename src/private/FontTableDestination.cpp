@@ -92,10 +92,10 @@ void FontTableDestination::handlePlainText(const QByteArray &plainText)
         m_output->insertFontTableEntry(m_fontTableEntry, m_currentFontTableIndex);
     } else if (plainText.endsWith(";")) {
         // probably a font name with a terminating delimiter
-        int delimiterPosition = plainText.indexOf(";");
+        const int delimiterPosition = plainText.indexOf(";");
         if (delimiterPosition == (plainText.length() - 1)) {
             // It is at the end, chop it off
-            QString fontName = QString::fromUtf8(plainText.left(delimiterPosition));
+            const QString fontName = QString::fromUtf8(plainText.left(delimiterPosition));
             m_fontTableEntry.setFontName(fontName);
             m_output->insertFontTableEntry(m_fontTableEntry, m_currentFontTableIndex);
         } else {

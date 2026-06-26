@@ -53,7 +53,7 @@ bool ReaderPrivate::open(const QString &filename)
 {
     m_inputDevice = new QFile(filename);
 
-    bool result = m_inputDevice->open(QIODevice::ReadOnly);
+    const bool result = m_inputDevice->open(QIODevice::ReadOnly);
 
     return result;
 }
@@ -231,7 +231,7 @@ void ReaderPrivate::parseDocument(Tokenizer &tokenizer)
     QRtfReader::ControlWord controlWord(QLatin1String(""));
 
     while (!atEndOfFile) {
-        Token token = tokenizer.fetchToken();
+        const Token token = tokenizer.fetchToken();
         // token.dump();
         switch (token.type) {
         case Invalid:
@@ -239,7 +239,7 @@ void ReaderPrivate::parseDocument(Tokenizer &tokenizer)
             break;
         case OpenGroup: {
             // Store the current state on the stack
-            RtfGroupState state;
+            const RtfGroupState state;
             m_stateStack.push(state);
             nextSymbolMightBeDestination = true;
             m_output->startGroup();

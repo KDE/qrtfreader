@@ -75,8 +75,8 @@ void PictDestination::aboutToEndDestination()
         if (m_goalWidth == 0 || m_goalHeight == 0) {
             QBuffer buffer(&m_pictData);
             buffer.open(QIODevice::ReadOnly);
-            QImageReader reader(&buffer);
-            QSize size = reader.size();
+            const QImageReader reader(&buffer);
+            const QSize size = reader.size();
             if (m_goalWidth == 0) {
                 m_goalWidth = size.width();
             }
