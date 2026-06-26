@@ -32,6 +32,7 @@ target_sources(QRtfReader PRIVATE
     FontTableEntry.cpp
     StyleSheetTableEntry.cpp
     private/Reader_p.cpp
+    private/TextDocumentRtfOutput_p.cpp
     private/ControlWord.cpp
     private/AuthorPcdataDestination.cpp
     private/CategoryPcdataDestination.cpp

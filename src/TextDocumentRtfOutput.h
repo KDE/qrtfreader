@@ -12,10 +12,9 @@ class QTextDocument;
 class QTextImageFormat;
 
 #include "qrtfreader_export.h"
-#include <QStack>
-#include <QTextCharFormat>
 namespace QRtfReader
 {
+class TextDocumentRtfOutputPrivate;
 class QRTFREADER_EXPORT TextDocumentRtfOutput : public AbstractRtfOutput
 {
 public:
@@ -97,29 +96,8 @@ public:
     void setSpaceBefore(const int twips) override;
     void setSpaceAfter(const int twips) override;
 
-protected:
-    // The text cursor on the document being generated
-    QTextCursor *m_cursor;
-
-    QStack<QTextCharFormat> m_textCharFormatStack;
-
-    QTextBlockFormat m_paragraphFormat;
-
-    QList<QColor> m_colourTable;
-
-    QHash<int, FontTableEntry> m_fontTable;
-    int m_defaultFontIndex;
-    bool m_haveSetFont;
-
-    QHash<int, StyleSheetTableEntry> m_stylesheetTable;
-
-    QTextDocument *m_document;
-    QString m_encoding;
-
-    /**
-      Convenience routine to convert a size in twips into pixels
-    */
-    qreal pixelsFromTwips(const int twips);
+private:
+    const QScopedPointer<TextDocumentRtfOutputPrivate> d;
 };
 }
 
