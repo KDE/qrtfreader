@@ -4,11 +4,23 @@
 #include "TextDocumentRtfOutput.h"
 #include "private/TextDocumentRtfOutput_p.h"
 
+#include "AbstractRtfOutput.h"
+#include "FontTableEntry.h"
+#include "StyleSheetTableEntry.h"
+
+#include <QByteArray>
+#include <QChar>
+#include <QColor>
 #include <QDebug>
+#include <QFont>
+#include <QLoggingCategory>
 #include <QRegularExpression>
+#include <QString>
 #include <QTextCursor>
 #include <QTextDocument>
 #include <QUrl>
+#include <Qt>
+#include <QtTypes>
 
 #include "qrtfreader_debug.h"
 

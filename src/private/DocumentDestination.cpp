@@ -5,6 +5,12 @@
 
 #include "AbstractRtfOutput.h"
 #include "ControlWord_p.h"
+#include "Destination_p.h"
+
+#include <QByteArray>
+#include <QChar>
+#include <QLoggingCategory>
+#include <QString>
 
 #include "qrtfreader_debug.h"
 

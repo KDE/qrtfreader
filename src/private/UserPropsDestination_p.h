@@ -7,6 +7,7 @@
 #include "Destination_p.h"
 
 #include <QColor>
+#include <QMetaType>
 #include <QString>
 #include <QVariant>
 

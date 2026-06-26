@@ -4,6 +4,9 @@
 #include "InfoRevisedTimeDestination_p.h"
 
 #include "AbstractRtfOutput.h"
+#include "InfoTimeDestination_p.h"
+
+#include <QString>
 
 namespace QRtfReader
 {

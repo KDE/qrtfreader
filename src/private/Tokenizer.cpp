@@ -3,8 +3,14 @@
 
 #include "Tokenizer_p.h"
 
+#include "Token_p.h"
+
+#include <QLoggingCategory>
+#include <QString>
+#include <QtTypes>
+
 #include "qrtfreader_debug.h"
-#include <ctype.h>
+#include <cctype>
 
 namespace QRtfReader
 {

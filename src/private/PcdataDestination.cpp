@@ -4,6 +4,12 @@
 #include "PcdataDestination_p.h"
 
 #include "AbstractRtfOutput.h"
+#include "DocumentDestination_p.h"
+
+#include <QByteArray>
+#include <QChar>
+#include <QLoggingCategory>
+#include <QString>
 
 #include "qrtfreader_debug.h"
 

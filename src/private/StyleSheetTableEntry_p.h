@@ -8,6 +8,7 @@
 
 #include <QSharedData>
 #include <QString>
+#include <Qt>
 
 #include "qrtfreader_export.h"
 

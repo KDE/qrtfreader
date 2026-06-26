@@ -4,6 +4,13 @@
 #include "InfoTimeDestination_p.h"
 
 #include "AbstractRtfOutput.h"
+#include "Destination_p.h"
+
+#include <QByteArray>
+#include <QDateTime>
+#include <QLoggingCategory>
+#include <QString>
+#include <QtPreprocessorSupport>
 
 #include "qrtfreader_debug.h"
 

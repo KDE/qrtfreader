@@ -5,6 +5,9 @@
 
 #include "AbstractRtfOutput.h"
 
+#include <QLoggingCategory>
+#include <QtPreprocessorSupport>
+
 #include "qrtfreader_debug.h"
 
 namespace QRtfReader

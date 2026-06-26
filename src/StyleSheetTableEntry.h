@@ -5,6 +5,7 @@
 #define RTFREADER_STYLESHEETTABLEENTRY_H
 
 #include <QSharedDataPointer>
+#include <QString>
 #include <Qt>
 
 #include "qrtfreader_export.h"

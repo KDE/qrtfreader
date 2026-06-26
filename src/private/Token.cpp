@@ -3,6 +3,8 @@
 
 #include "Token_p.h"
 
+#include <QLoggingCategory>
+
 #include "qrtfreader_debug.h"
 
 namespace QRtfReader

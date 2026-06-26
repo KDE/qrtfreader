@@ -9,9 +9,12 @@
 
 #include <QColor>
 #include <QDateTime>
+#include <QList>
+#include <QScopedPointer>
 #include <QString>
 #include <QTextImageFormat>
 #include <QVariant>
+#include <QtTypes>
 
 #include "qrtfreader_export.h"
 /**

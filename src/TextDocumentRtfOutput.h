@@ -6,6 +6,15 @@
 
 #include "AbstractRtfOutput.h"
 
+#include "FontTableEntry.h"
+#include "StyleSheetTableEntry.h"
+
+#include <QByteArray>
+#include <QColor>
+#include <QScopedPointer>
+#include <QString>
+#include <QtTypes>
+
 #include "qrtfreader_export.h"
 
 class QImage;

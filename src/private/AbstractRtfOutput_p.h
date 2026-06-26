@@ -5,6 +5,7 @@
 #define RTFREADER_ABSTRACTRTFOUTPUT_P_H
 
 #include <QDateTime>
+#include <QHash>
 #include <QString>
 #include <QVariant>
 
@@ -45,7 +46,7 @@ public:
     // The keywords associated with the document (from document meta-data, if any)
     QString m_keywords;
 
-    // The hyperlink base associated with this document (path or URL)
+    // The hyperlink base associated with this document (path or URL)QColor
     QString m_hlinkbase;
 
     // The date and time this document was created (from document meta-data, if any)

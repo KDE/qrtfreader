@@ -4,9 +4,14 @@
 #include "PictDestination_p.h"
 
 #include "AbstractRtfOutput.h"
+#include "Destination_p.h"
 
 #include <QBuffer>
+#include <QByteArray>
 #include <QImageReader>
+#include <QLoggingCategory>
+#include <QString>
+#include <QtPreprocessorSupport>
 
 #include "qrtfreader_debug.h"
 

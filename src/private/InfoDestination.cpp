@@ -4,6 +4,11 @@
 #include "InfoDestination_p.h"
 
 #include "AbstractRtfOutput.h"
+#include "Destination_p.h"
+
+#include <QByteArray>
+#include <QLoggingCategory>
+#include <QString>
 
 #include "qrtfreader_debug.h"
 

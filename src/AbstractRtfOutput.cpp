@@ -4,6 +4,11 @@
 #include "AbstractRtfOutput.h"
 #include "private/AbstractRtfOutput_p.h"
 
+#include <QDateTime>
+#include <QList>
+#include <QString>
+#include <QVariant>
+
 /**
    Namespace for the public interface for the QRtfReader classes
 */

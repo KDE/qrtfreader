@@ -4,6 +4,9 @@
 #include "GeneratorPcdataDestination_p.h"
 
 #include "AbstractRtfOutput.h"
+#include "PcdataDestination_p.h"
+
+#include <QString>
 
 namespace QRtfReader
 {

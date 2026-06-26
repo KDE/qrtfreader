@@ -9,6 +9,7 @@
 #include <QByteArray>
 #include <QString>
 #include <QTextImageFormat>
+#include <QtTypes>
 
 #include "qrtfreader_export.h"
 namespace QRtfReader

@@ -6,6 +6,7 @@
 
 #include <QDebug>
 #include <QObject>
+#include <QScopedPointer>
 #include <QTextDocument>
 
 #include "qrtfreader_export.h"

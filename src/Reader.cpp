@@ -6,9 +6,8 @@
 
 #include "AbstractRtfOutput.h"
 
+#include <QObject>
 #include <QString>
-
-#include "qrtfreader_debug.h"
 
 namespace QRtfReader
 {

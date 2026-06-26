@@ -3,6 +3,7 @@
 
 #include "ControlWord_p.h"
 
+#include <QGlobalStatic>
 #include <QHash>
 #include <QSet>
 #include <QString>

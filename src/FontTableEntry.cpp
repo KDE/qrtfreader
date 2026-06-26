@@ -4,6 +4,8 @@
 #include "FontTableEntry.h"
 #include "private/FontTableEntry_p.h"
 
+#include <QString>
+
 namespace QRtfReader
 {
 

@@ -4,6 +4,13 @@
 #include "FontTableDestination_p.h"
 
 #include "AbstractRtfOutput.h"
+#include "Destination_p.h"
+#include "FontTableEntry.h"
+
+#include <QByteArray>
+#include <QLoggingCategory>
+#include <QString>
+#include <QtPreprocessorSupport>
 
 #include "qrtfreader_debug.h"
 

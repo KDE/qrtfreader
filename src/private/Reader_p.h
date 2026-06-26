@@ -6,6 +6,7 @@
 
 #include <QFile>
 #include <QStack>
+#include <QString>
 
 #include "qrtfreader_export.h"
 

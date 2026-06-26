@@ -4,6 +4,9 @@
 #include "StyleSheetTableEntry.h"
 #include "private/StyleSheetTableEntry_p.h"
 
+#include <QString>
+#include <Qt>
+
 namespace QRtfReader
 {
 StyleSheetTableEntry::StyleSheetTableEntry()

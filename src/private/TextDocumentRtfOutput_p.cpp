@@ -3,10 +3,17 @@
 
 #include "TextDocumentRtfOutput_p.h"
 
+#include "FontTableEntry.h"
+
+#include <QColor>
 #include <QDebug>
+#include <QFont>
+#include <QLoggingCategory>
 #include <QStringList>
 #include <QTextCursor>
 #include <QTextDocument>
+#include <Qt>
+#include <QtTypes>
 
 #include "qrtfreader_debug.h"
 

@@ -8,8 +8,10 @@
 
 #include "Destination_p.h"
 
+#include <QByteArray>
 #include <QColor>
 #include <QString>
+#include <QtTypes>
 
 #include "qrtfreader_export.h"
 namespace QRtfReader

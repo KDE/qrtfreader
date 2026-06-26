@@ -4,10 +4,16 @@
 #ifndef RTFREADER_TEXTDOCUMENTRTFOUTPUT_P_H
 #define RTFREADER_TEXTDOCUMENTRTFOUTPUT_P_H
 
-#include "AbstractRtfOutput.h"
+#include "FontTableEntry.h"
+#include "StyleSheetTableEntry.h"
 
+#include <QColor>
+#include <QHash>
+#include <QList>
 #include <QStack>
+#include <QString>
 #include <QTextCharFormat>
+#include <QtTypes>
 
 #include "qrtfreader_export.h"
 
