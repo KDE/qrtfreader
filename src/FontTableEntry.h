@@ -37,16 +37,16 @@ public:
 
     FontTableEntry &operator=(const FontTableEntry &);
 
-    FontFamily fontFamily() const;
+    [[nodiscard]] FontFamily fontFamily() const;
     void setFontFamily(FontFamily fontFamily);
 
-    FontPitch fontPitch() const;
+    [[nodiscard]] FontPitch fontPitch() const;
     void setFontPitch(FontPitch fontPitch);
 
-    QString fontName() const;
+    [[nodiscard]] QString fontName() const;
     void setFontName(const QString &fontName);
 
-    QString encoding() const;
+    [[nodiscard]] QString encoding() const;
     void setEncoding(const QString &encoding);
 
 private:

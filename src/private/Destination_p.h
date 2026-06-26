@@ -23,7 +23,7 @@ public:
 
     bool hasName(const QString &name);
 
-    QString name() const;
+    [[nodiscard]] QString name() const;
 
     virtual void handleControlWord(const QByteArray &controlWord, bool hasValue, int value);
 

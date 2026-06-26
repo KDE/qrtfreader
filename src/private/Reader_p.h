@@ -32,7 +32,7 @@ public:
 
     void close();
 
-    QString fileName() const;
+    [[nodiscard]] QString fileName() const;
 
     // parse the document
     bool parseTo(AbstractRtfOutput *output);

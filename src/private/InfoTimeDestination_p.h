@@ -26,7 +26,7 @@ public:
     void aboutToEndDestination() override = 0;
 
 protected:
-    QDateTime dateTime() const;
+    [[nodiscard]] QDateTime dateTime() const;
 
 private:
     int m_year;

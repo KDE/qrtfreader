@@ -59,7 +59,7 @@ public:
 
        Will return an empty string if no file is open.
     */
-    QString fileName() const;
+    [[nodiscard]] QString fileName() const;
 
     /**
        Parse the document

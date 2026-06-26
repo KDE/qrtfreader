@@ -35,7 +35,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString author() const;
+    [[nodiscard]] virtual QString author() const;
     virtual void setAuthor(const QString &author);
 
     /**
@@ -44,7 +44,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString companyName() const;
+    [[nodiscard]] virtual QString companyName() const;
     virtual void setCompanyName(const QString &companyName);
 
     /**
@@ -53,7 +53,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString title() const;
+    [[nodiscard]] virtual QString title() const;
     virtual void setTitle(const QString &title);
 
     /**
@@ -62,7 +62,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString subject() const;
+    [[nodiscard]] virtual QString subject() const;
     virtual void setSubject(const QString &subject);
 
     /**
@@ -71,7 +71,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString operatorName() const;
+    [[nodiscard]] virtual QString operatorName() const;
     virtual void setOperatorName(const QString &operatorName);
 
     /**
@@ -80,7 +80,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString managerName() const;
+    [[nodiscard]] virtual QString managerName() const;
     virtual void setManagerName(const QString &managerName);
 
     /**
@@ -93,7 +93,7 @@ public:
 
       \sa documentComment
     */
-    virtual QString comment() const;
+    [[nodiscard]] virtual QString comment() const;
     virtual void setComment(const QString &comment);
 
     /**
@@ -104,7 +104,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString documentComment() const;
+    [[nodiscard]] virtual QString documentComment() const;
     virtual void setDocumentComment(const QString &documentComment);
 
     /**
@@ -113,7 +113,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString keywords() const;
+    [[nodiscard]] virtual QString keywords() const;
     virtual void setKeywords(const QString &keywords);
 
     /**
@@ -122,7 +122,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString category() const;
+    [[nodiscard]] virtual QString category() const;
     virtual void setCategory(const QString &category);
 
     /**
@@ -133,7 +133,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString hLinkBase() const;
+    [[nodiscard]] virtual QString hLinkBase() const;
     virtual void setHLinkBase(const QString &hLinkBase);
 
     /**
@@ -145,7 +145,7 @@ public:
       \note This may not be valid - applications may not set this,
       or may not update it.
     */
-    virtual QString generatorInformation() const;
+    [[nodiscard]] virtual QString generatorInformation() const;
     virtual void setGeneratorInformation(const QString &generatorInformation);
 
     /**
@@ -154,7 +154,7 @@ public:
       \note This may not be valid - applications may not set this,
       or time may not be set, or it may be set to something silly.
     */
-    virtual QDateTime created() const;
+    [[nodiscard]] virtual QDateTime created() const;
     virtual void setCreatedDateTime(const QDateTime &dateTime);
 
     /**
@@ -163,7 +163,7 @@ public:
       \note This may not be valid - applications may not set this,
       or time may not be set, or it may be set to something silly.
     */
-    virtual QDateTime revised() const;
+    [[nodiscard]] virtual QDateTime revised() const;
     virtual void setRevisedDateTime(const QDateTime &dateTime);
 
     /**
@@ -172,7 +172,7 @@ public:
       \note This may not be valid - applications may not set this,
       or time may not be set, or it may be set to something silly.
     */
-    virtual QDateTime printed() const;
+    [[nodiscard]] virtual QDateTime printed() const;
     virtual void setPrintedDateTime(const QDateTime &dateTime);
 
     /**
@@ -181,7 +181,7 @@ public:
       \note This may not be valid - applications may not set this,
       or it may be set to something silly.
     */
-    virtual int totalEditingTime() const;
+    [[nodiscard]] virtual int totalEditingTime() const;
     virtual void setTotalEditingTime(int totalEditingTime);
 
     /**
@@ -190,7 +190,7 @@ public:
       \note This may not be valid - applications may not set this,
       or it may be set to something silly.
     */
-    virtual int numberOfPages() const;
+    [[nodiscard]] virtual int numberOfPages() const;
     virtual void setNumberOfPages(int numberOfPages);
 
     /**
@@ -199,7 +199,7 @@ public:
       \note This may not be valid - applications may not set this,
       or it may be set to something silly.
     */
-    virtual int numberOfWords() const;
+    [[nodiscard]] virtual int numberOfWords() const;
     virtual void setNumberOfWords(int numberOfWords);
 
     /**
@@ -208,7 +208,7 @@ public:
       \note This may not be valid - applications may not set this,
       or it may be set to something silly.
     */
-    virtual int numberOfCharacters() const;
+    [[nodiscard]] virtual int numberOfCharacters() const;
     virtual void setNumberOfCharacters(int numberOfCharacters);
 
     /**
@@ -218,7 +218,7 @@ public:
       \note This may not be valid - applications may not set this,
       or it may be set to something silly.
     */
-    virtual int numberOfCharactersWithoutSpaces() const;
+    [[nodiscard]] virtual int numberOfCharactersWithoutSpaces() const;
     virtual void setNumberOfCharactersWithoutSpaces(int numberOfCharactersWithoutSpaces);
 
     /**
@@ -227,7 +227,7 @@ public:
       \note This may not be valid - applications may not set this,
       or it may be set to something silly.
     */
-    virtual int versionNumber() const;
+    [[nodiscard]] virtual int versionNumber() const;
     virtual void setVersionNumber(int versionNumber);
 
     /**
@@ -236,15 +236,15 @@ public:
       \note This may not be valid - applications may not set this,
       or it may be set to something silly.
     */
-    virtual int internalVersionNumber() const;
+    [[nodiscard]] virtual int internalVersionNumber() const;
     virtual void setInternalVersionNumber(int internalVersionNumber);
 
-    QVariant userProp(const QString &propertyName) const;
-    QList<QString> userPropNames() const;
+    [[nodiscard]] QVariant userProp(const QString &propertyName) const;
+    [[nodiscard]] QList<QString> userPropNames() const;
     void addUserProp(const QString &propertyName, const QVariant &propertyValue);
 
     // TODO: consider adding default implementation for this
-    virtual QString convertText(const QByteArray &text) const = 0;
+    [[nodiscard]] virtual QString convertText(const QByteArray &text) const = 0;
     virtual void appendText(const QByteArray &text) = 0;
     virtual void appendText(const QString &text) = 0;
     virtual void insertPar() = 0;

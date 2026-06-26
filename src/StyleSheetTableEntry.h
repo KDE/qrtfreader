@@ -28,22 +28,22 @@ public:
 
     StyleSheetTableEntry &operator=(const StyleSheetTableEntry &);
 
-    TextAlignment textAlignment() const;
+    [[nodiscard]] TextAlignment textAlignment() const;
     void setTextAlignment(TextAlignment textAlignment);
 
-    int leftIndent() const;
+    [[nodiscard]] int leftIndent() const;
     void setLeftIndent(int leftIndent);
 
-    int rightIndent() const;
+    [[nodiscard]] int rightIndent() const;
     void setRightIndent(int rightIndent);
 
-    int topMargin() const;
+    [[nodiscard]] int topMargin() const;
     void setTopMargin(int topMargin);
 
-    Qt::LayoutDirection layoutDirection() const;
+    [[nodiscard]] Qt::LayoutDirection layoutDirection() const;
     void setLayoutDirection(Qt::LayoutDirection layoutDirection);
 
-    QString styleName() const;
+    [[nodiscard]] QString styleName() const;
     void setStyleName(const QString &styleName);
 
 private:

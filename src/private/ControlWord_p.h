@@ -23,7 +23,7 @@ public:
     /**
        Test whether this control word is a supported destination
     */
-    bool isSupportedDestination() const;
+    [[nodiscard]] bool isSupportedDestination() const;
 
     /**
        Test whether a control word name is a destination (even if we don't support it)
@@ -33,7 +33,7 @@ public:
     /**
        Test whether this control word is one we recognise
     */
-    bool isKnown() const;
+    [[nodiscard]] bool isKnown() const;
 
 private:
     QString m_name;
