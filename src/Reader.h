@@ -4,13 +4,9 @@
 #ifndef RTFREADER_H
 #define RTFREADER_H
 
-#include <QDateTime>
 #include <QDebug>
-#include <QFile>
 #include <QObject>
-#include <QStack>
 #include <QTextDocument>
-#include <QTextFormat>
 
 #include "qrtfreader_export.h"
 /**
@@ -24,6 +20,7 @@ class Destination;
 class RtfGroupState;
 class Tokenizer;
 
+class ReaderPrivate;
 /**
    Reader for RTF formatted documents
 
@@ -84,50 +81,7 @@ public:
     void todoDest(QRtfReader::RtfProperty *property);
 
 private:
-    /////////////////////////////////////////////////
-    //
-    // Implementation details
-    //
-    ////////////////////////////////////////////////
-
-    // parse the RTF file, inserting elements into the document
-    // being generated
-    void parseFile();
-
-    // parse the file header section, including sanity checks
-    bool parseFileHeader(Tokenizer &tokenizer);
-
-    // check the file header for format / version compatibility
-    bool headerFormatIsKnown(const QString &tokenName, int tokenValue);
-
-    // parse the body of the document
-    void parseDocument(Tokenizer &tokenizer);
-
-    // Change the destination
-    void changeDestination(const QString &destinationName);
-
-    // Destination factory
-    Destination *makeDestination(const QString &destinationName);
-
-    /////////////////////////////////////////////////
-    //
-    // Member variables below
-    //
-    ////////////////////////////////////////////////
-
-    // The name of the file that is open (if any)
-    QFile *m_inputDevice;
-
-    // The output strategy
-    AbstractRtfOutput *m_output;
-
-    // The destination stack
-    QStack<Destination *> m_destinationStack;
-
-    QStack<RtfGroupState> m_stateStack;
-
-    // debug things
-    QString m_debugIndent;
+    const QScopedPointer<ReaderPrivate> d;
 };
 }
 
