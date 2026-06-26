@@ -26,41 +26,88 @@ set_target_properties(QRtfReader PROPERTIES
 )
 
 target_sources(QRtfReader PRIVATE
-    Reader.cpp
-    TextDocumentRtfOutput.cpp
+#public classes
+    AbstractRtfOutput.h
     AbstractRtfOutput.cpp
+    Reader.h
+    Reader.cpp
+    TextDocumentRtfOutput.h
+    TextDocumentRtfOutput.cpp
+
+    FontTableEntry.h
     FontTableEntry.cpp
+    StyleSheetTableEntry.h
     StyleSheetTableEntry.cpp
+
+#private parts of public classes
+    private/AbstractRtfOutput_p.h
+    private/Reader_p.h
     private/Reader_p.cpp
+    private/TextDocumentRtfOutput_p.h
     private/TextDocumentRtfOutput_p.cpp
-    private/ControlWord.cpp
+
+    private/FontTableEntry_p.h
+    private/StyleSheetTableEntry_p.h
+
+#private classes
+    private/AuthorPcdataDestination_p.h
     private/AuthorPcdataDestination.cpp
+    private/CategoryPcdataDestination_p.h
     private/CategoryPcdataDestination.cpp
+    private/ColorTableDestination_p.h
     private/ColorTableDestination.cpp
+    private/CommentPcdataDestination_p.h
     private/CommentPcdataDestination.cpp
+    private/CompanyPcdataDestination_p.h
     private/CompanyPcdataDestination.cpp
+    private/ControlWord_p.h
+    private/ControlWord.cpp
+    private/Destination_p.h
     private/Destination.cpp
+    private/DocumentCommentPcdataDestination_p.h
     private/DocumentCommentPcdataDestination.cpp
+    private/DocumentDestination_p.h
     private/DocumentDestination.cpp
+    private/FontTableDestination_p.h
     private/FontTableDestination.cpp
+    private/GeneratorPcdataDestination_p.h
     private/GeneratorPcdataDestination.cpp
+    private/HLinkBasePcdataDestination_p.h
     private/HLinkBasePcdataDestination.cpp
+    private/IgnoredDestination_p.h
     private/IgnoredDestination.cpp
+    private/InfoDestination_p.h
     private/InfoDestination.cpp
+    private/InfoTimeDestination_p.h
     private/InfoTimeDestination.cpp
+    private/InfoCreatedTimeDestination_p.h
     private/InfoCreatedTimeDestination.cpp
+    private/InfoPrintedTimeDestination_p.h
     private/InfoPrintedTimeDestination.cpp
+    private/InfoRevisedTimeDestination_p.h
     private/InfoRevisedTimeDestination.cpp
+    private/KeywordsPcdataDestination_p.h
     private/KeywordsPcdataDestination.cpp
+    private/ManagerPcdataDestination_p.h
     private/ManagerPcdataDestination.cpp
+    private/OperatorPcdataDestination_p.h
     private/OperatorPcdataDestination.cpp
+    private/PcdataDestination_p.h
     private/PcdataDestination.cpp
+    private/PictDestination_p.h
     private/PictDestination.cpp
-    private/SubjectPcdataDestination.cpp
+    private/RtfGroupState_p.h
+    private/StyleSheetDestination_p.h
     private/StyleSheetDestination.cpp
+    private/SubjectPcdataDestination_p.h
+    private/SubjectPcdataDestination.cpp
+    private/TitlePcdataDestination_p.h
     private/TitlePcdataDestination.cpp
+    private/Token_p.h
     private/Token.cpp
+    private/Tokenizer_p.h
     private/Tokenizer.cpp
+    private/UserPropsDestination_p.h
     private/UserPropsDestination.cpp
     ${debug_SRCS}
 )
