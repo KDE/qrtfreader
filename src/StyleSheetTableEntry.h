@@ -32,16 +32,16 @@ public:
     void setTextAlignment(TextAlignment textAlignment);
 
     int leftIndent() const;
-    void setLeftIndent(const int leftIndent);
+    void setLeftIndent(int leftIndent);
 
     int rightIndent() const;
-    void setRightIndent(const int rightIndent);
+    void setRightIndent(int rightIndent);
 
     int topMargin() const;
-    void setTopMargin(const int topMargin);
+    void setTopMargin(int topMargin);
 
     Qt::LayoutDirection layoutDirection() const;
-    void setLayoutDirection(const Qt::LayoutDirection layoutDirection);
+    void setLayoutDirection(Qt::LayoutDirection layoutDirection);
 
     QString styleName() const;
     void setStyleName(const QString &styleName);

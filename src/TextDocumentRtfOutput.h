@@ -48,23 +48,23 @@ public:
 
     void insertBullet() override;
 
-    void setFontItalic(const int value) override;
+    void setFontItalic(int value) override;
 
-    void setFontBold(const int value) override;
+    void setFontBold(int value) override;
 
-    void setFontUnderline(const int value) override;
+    void setFontUnderline(int value) override;
 
-    void setFontStrikeout(const bool value) override;
+    void setFontStrikeout(bool value) override;
 
-    void setFontPointSize(const int pointSize) override;
+    void setFontPointSize(int pointSize) override;
 
-    void setForegroundColour(const int colourIndex) override;
-    void setHighlightColour(const int colourIndex) override;
-    void setParagraphPatternBackgroundColour(const int colourIndex) override;
+    void setForegroundColour(int colourIndex) override;
+    void setHighlightColour(int colourIndex) override;
+    void setParagraphPatternBackgroundColour(int colourIndex) override;
 
-    void setFont(const int fontIndex) override;
+    void setFont(int fontIndex) override;
 
-    void setDefaultFont(const int fontIndex) override;
+    void setDefaultFont(int fontIndex) override;
 
     void setFontSuperscript() override;
     void setFontSubscript() override;
@@ -85,17 +85,17 @@ public:
     void setParagraphAlignmentJustified() override;
     void setParagraphAlignmentRight() override;
 
-    void setFirstLineIndent(const int twips) override;
-    void setLeftIndent(const int twips) override;
-    void setRightIndent(const int twips) override;
+    void setFirstLineIndent(int twips) override;
+    void setLeftIndent(int twips) override;
+    void setRightIndent(int twips) override;
 
     void createImage(const QByteArray &data, const QTextImageFormat &format) override;
 
-    void setPageHeight(const int pageHeight) override;
-    void setPageWidth(const int pageWidth) override;
+    void setPageHeight(int pageHeight) override;
+    void setPageWidth(int pageWidth) override;
 
-    void setSpaceBefore(const int twips) override;
-    void setSpaceAfter(const int twips) override;
+    void setSpaceBefore(int twips) override;
+    void setSpaceAfter(int twips) override;
 
 private:
     const QScopedPointer<TextDocumentRtfOutputPrivate> d;

@@ -21,7 +21,7 @@ public:
 
     ~ColorTableDestination() override;
 
-    void handleControlWord(const QByteArray &controlWord, bool hasValue, const int value) override;
+    void handleControlWord(const QByteArray &controlWord, bool hasValue, int value) override;
     void handlePlainText(const QByteArray &plainText) override;
 
 private:

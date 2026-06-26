@@ -25,7 +25,7 @@ public:
     /**
       Convenience routine to convert a size in twips into pixels
     */
-    qreal pixelsFromTwips(const int twips) const;
+    qreal pixelsFromTwips(int twips) const;
 
     /////////////////////////////////////////////////
     //
@@ -36,11 +36,11 @@ public:
     void startGroup();
     void endGroup();
 
-    void setForegroundColour(const int colourIndex);
-    void setHighlightColour(const int colourIndex);
-    void setParagraphPatternBackgroundColour(const int colourIndex);
+    void setForegroundColour(int colourIndex);
+    void setHighlightColour(int colourIndex);
+    void setParagraphPatternBackgroundColour(int colourIndex);
 
-    void setFont(const int fontIndex);
+    void setFont(int fontIndex);
 
     void resetParagraphFormat();
     void resetCharacterProperties();

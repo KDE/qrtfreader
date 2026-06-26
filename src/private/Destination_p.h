@@ -25,7 +25,7 @@ public:
 
     QString name() const;
 
-    virtual void handleControlWord(const QByteArray &controlWord, bool hasValue, const int value);
+    virtual void handleControlWord(const QByteArray &controlWord, bool hasValue, int value);
 
     virtual void handlePlainText(const QByteArray &plainText);
 

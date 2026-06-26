@@ -182,7 +182,7 @@ public:
       or it may be set to something silly.
     */
     virtual int totalEditingTime() const;
-    virtual void setTotalEditingTime(const int totalEditingTime);
+    virtual void setTotalEditingTime(int totalEditingTime);
 
     /**
       The number of pages in this document (from the document metadata)
@@ -191,7 +191,7 @@ public:
       or it may be set to something silly.
     */
     virtual int numberOfPages() const;
-    virtual void setNumberOfPages(const int numberOfPages);
+    virtual void setNumberOfPages(int numberOfPages);
 
     /**
       The number of words in this document (from the document metadata)
@@ -200,7 +200,7 @@ public:
       or it may be set to something silly.
     */
     virtual int numberOfWords() const;
-    virtual void setNumberOfWords(const int numberOfWords);
+    virtual void setNumberOfWords(int numberOfWords);
 
     /**
       The number of characters in this document (from the document metadata)
@@ -209,7 +209,7 @@ public:
       or it may be set to something silly.
     */
     virtual int numberOfCharacters() const;
-    virtual void setNumberOfCharacters(const int numberOfCharacters);
+    virtual void setNumberOfCharacters(int numberOfCharacters);
 
     /**
       The number of characters (not including spaces) in this document
@@ -219,7 +219,7 @@ public:
       or it may be set to something silly.
     */
     virtual int numberOfCharactersWithoutSpaces() const;
-    virtual void setNumberOfCharactersWithoutSpaces(const int numberOfCharactersWithoutSpaces);
+    virtual void setNumberOfCharactersWithoutSpaces(int numberOfCharactersWithoutSpaces);
 
     /**
       The version number for this document (from the document metadata)
@@ -228,7 +228,7 @@ public:
       or it may be set to something silly.
     */
     virtual int versionNumber() const;
-    virtual void setVersionNumber(const int versionNumber);
+    virtual void setVersionNumber(int versionNumber);
 
     /**
       The version number for this document (from the document metadata)
@@ -237,7 +237,7 @@ public:
       or it may be set to something silly.
     */
     virtual int internalVersionNumber() const;
-    virtual void setInternalVersionNumber(const int internalVersionNumber);
+    virtual void setInternalVersionNumber(int internalVersionNumber);
 
     QVariant userProp(const QString &propertyName) const;
     QList<QString> userPropNames() const;
@@ -263,29 +263,29 @@ public:
     virtual void setParagraphAlignmentCentred() = 0;
     virtual void setParagraphAlignmentJustified() = 0;
     virtual void setParagraphAlignmentRight() = 0;
-    virtual void setFirstLineIndent(const int twips) = 0;
-    virtual void setLeftIndent(const int twips) = 0;
-    virtual void setRightIndent(const int twips) = 0;
-    virtual void setFontItalic(const int value) = 0;
-    virtual void setFontBold(const int value) = 0;
-    virtual void setFontUnderline(const int value) = 0;
-    virtual void setFontPointSize(const int value) = 0;
+    virtual void setFirstLineIndent(int twips) = 0;
+    virtual void setLeftIndent(int twips) = 0;
+    virtual void setRightIndent(int twips) = 0;
+    virtual void setFontItalic(int value) = 0;
+    virtual void setFontBold(int value) = 0;
+    virtual void setFontUnderline(int value) = 0;
+    virtual void setFontPointSize(int value) = 0;
     virtual void setFontSuperscript() = 0;
     virtual void setFontSubscript() = 0;
-    virtual void setFontStrikeout(const bool value) = 0;
-    virtual void setForegroundColour(const int value) = 0;
-    virtual void setHighlightColour(const int value) = 0;
-    virtual void setParagraphPatternBackgroundColour(const int value) = 0;
-    virtual void setFont(const int fontIndex) = 0;
-    virtual void setDefaultFont(const int fontIndex) = 0;
+    virtual void setFontStrikeout(bool value) = 0;
+    virtual void setForegroundColour(int value) = 0;
+    virtual void setHighlightColour(int value) = 0;
+    virtual void setParagraphPatternBackgroundColour(int value) = 0;
+    virtual void setFont(int fontIndex) = 0;
+    virtual void setDefaultFont(int fontIndex) = 0;
     virtual void setTextDirectionLeftToRight() = 0;
     virtual void setTextDirectionRightToLeft() = 0;
     virtual void resetCharacterProperties() = 0;
     virtual void createImage(const QByteArray &data, const QTextImageFormat &format) = 0;
-    virtual void setPageHeight(const int pageHeight) = 0;
-    virtual void setPageWidth(const int pageWidth) = 0;
-    virtual void setSpaceBefore(const int value) = 0;
-    virtual void setSpaceAfter(const int value) = 0;
+    virtual void setPageHeight(int pageHeight) = 0;
+    virtual void setPageWidth(int pageWidth) = 0;
+    virtual void setSpaceBefore(int value) = 0;
+    virtual void setSpaceAfter(int value) = 0;
     virtual void appendToColourTable(const QColor &colour) = 0;
     virtual void insertFontTableEntry(FontTableEntry fontTableEntry, quint32 fontTableIndex) = 0;
     virtual void insertStyleSheetTableEntry(quint32 stylesheetTableIndex, StyleSheetTableEntry stylesheetTableEntry) = 0;
