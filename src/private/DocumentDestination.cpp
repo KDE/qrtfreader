@@ -3,6 +3,7 @@
 
 #include "DocumentDestination_p.h"
 
+#include "AbstractRtfOutput.h"
 #include "ControlWord_p.h"
 
 #include "qrtfreader_debug.h"

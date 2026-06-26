@@ -3,6 +3,8 @@
 
 #include "CompanyPcdataDestination_p.h"
 
+#include "AbstractRtfOutput.h"
+
 namespace QRtfReader
 {
 CompanyPcdataDestination::CompanyPcdataDestination(AbstractRtfOutput *output, const QString &name)

@@ -3,6 +3,8 @@
 
 #include "TitlePcdataDestination_p.h"
 
+#include "AbstractRtfOutput.h"
+
 namespace QRtfReader
 {
 TitlePcdataDestination::TitlePcdataDestination(AbstractRtfOutput *output, const QString &name)

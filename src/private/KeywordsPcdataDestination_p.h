@@ -11,6 +11,7 @@
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {
+class AbstractRtfOutput;
 class QRTFREADER_EXPORT KeywordsPcdataDestination : public PcdataDestination
 {
 public:

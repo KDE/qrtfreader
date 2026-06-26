@@ -3,6 +3,8 @@
 
 #include "UserPropsDestination_p.h"
 
+#include "AbstractRtfOutput.h"
+
 #include "qrtfreader_debug.h"
 
 namespace QRtfReader

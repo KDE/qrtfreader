@@ -3,6 +3,8 @@
 
 #include "CommentPcdataDestination_p.h"
 
+#include "AbstractRtfOutput.h"
+
 namespace QRtfReader
 {
 CommentPcdataDestination::CommentPcdataDestination(AbstractRtfOutput *output, const QString &name)

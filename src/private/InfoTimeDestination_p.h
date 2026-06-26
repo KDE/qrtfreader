@@ -7,11 +7,13 @@
 #include "Destination_p.h"
 
 #include <QByteArray>
+#include <QDateTime>
 #include <QString>
 
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {
+class AbstractRtfOutput;
 class QRTFREADER_EXPORT InfoTimeDestination : public Destination
 {
 public:

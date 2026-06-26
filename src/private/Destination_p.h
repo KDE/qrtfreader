@@ -4,8 +4,6 @@
 #ifndef RTFREADER_DESTINATION_H
 #define RTFREADER_DESTINATION_H
 
-#include "AbstractRtfOutput.h"
-
 #include <QByteArray>
 #include <QString>
 
@@ -15,6 +13,7 @@ namespace QRtfReader
 /**
    A representation of a destination
 */
+class AbstractRtfOutput;
 class QRTFREADER_EXPORT Destination
 {
 public:

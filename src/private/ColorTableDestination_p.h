@@ -7,11 +7,13 @@
 #include "Destination_p.h"
 
 #include <QByteArray>
+#include <QColor>
 #include <QString>
 
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {
+class AbstractRtfOutput;
 class QRTFREADER_EXPORT ColorTableDestination : public Destination
 {
 public:

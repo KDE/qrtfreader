@@ -3,6 +3,8 @@
 
 #include "PictDestination_p.h"
 
+#include "AbstractRtfOutput.h"
+
 #include <QBuffer>
 #include <QImageReader>
 

@@ -3,6 +3,8 @@
 
 #include "IgnoredDestination_p.h"
 
+#include "AbstractRtfOutput.h"
+
 namespace QRtfReader
 {
 IgnoredDestination::IgnoredDestination(AbstractRtfOutput *output, const QString &name)

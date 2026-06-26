@@ -8,10 +8,12 @@
 
 #include <QByteArray>
 #include <QString>
+#include <QTextImageFormat>
 
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {
+class AbstractRtfOutput;
 class QRTFREADER_EXPORT PictDestination : public Destination
 {
 public:

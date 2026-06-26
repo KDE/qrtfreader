@@ -14,6 +14,7 @@
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {
+class AbstractRtfOutput;
 class QRTFREADER_EXPORT StyleSheetDestination : public Destination
 {
 public:
