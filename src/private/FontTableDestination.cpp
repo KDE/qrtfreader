@@ -11,6 +11,7 @@
 #include <QLoggingCategory>
 #include <QString>
 #include <QtPreprocessorSupport>
+#include <QtTypes>
 
 #include "qrtfreader_debug.h"
 
@@ -98,7 +99,7 @@ void FontTableDestination::handlePlainText(const QByteArray &plainText)
         m_output->insertFontTableEntry(m_fontTableEntry, m_currentFontTableIndex);
     } else if (plainText.endsWith(";")) {
         // probably a font name with a terminating delimiter
-        const int delimiterPosition = plainText.indexOf(";");
+        const qsizetype delimiterPosition = plainText.indexOf(";");
         if (delimiterPosition == (plainText.length() - 1)) {
             // It is at the end, chop it off
             const QString fontName = QString::fromUtf8(plainText.left(delimiterPosition));

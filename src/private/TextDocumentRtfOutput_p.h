@@ -66,11 +66,11 @@ public:
 
     QList<QColor> m_colourTable;
 
-    QHash<int, FontTableEntry> m_fontTable;
+    QHash<quint32, FontTableEntry> m_fontTable;
     int m_defaultFontIndex = 0;
     bool m_haveSetFont = false;
 
-    QHash<int, StyleSheetTableEntry> m_stylesheetTable;
+    QHash<quint32, StyleSheetTableEntry> m_stylesheetTable;
 
     QTextDocument *m_document = nullptr;
     QString m_encoding;

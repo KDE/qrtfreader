@@ -8,6 +8,7 @@
 
 #include <QByteArray>
 #include <QString>
+#include <QtTypes>
 
 #include "qrtfreader_export.h"
 namespace QRtfReader
@@ -25,7 +26,7 @@ public:
     void aboutToEndDestination() override;
 
 protected:
-    int m_charactersToSkip;
+    qsizetype m_charactersToSkip;
     int m_unicodeSkip;
 };
 }

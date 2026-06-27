@@ -59,7 +59,7 @@ void DocumentDestination::handleControlWord(const QByteArray &controlWord, bool 
         m_output->setFontUnderline(!hasValue || (hasValue && value != 0));
     } else if (controlWord == "fs") {
         if (hasValue && (value != 0)) {
-            m_output->setFontPointSize(value / 2.0);
+            m_output->setFontPointSize(static_cast<int>(value / 2.0));
         } else {
             m_output->setFontPointSize(24.0 / 2.0); // use default
         }
@@ -94,7 +94,7 @@ void DocumentDestination::handleControlWord(const QByteArray &controlWord, bool 
     } else if ((controlWord == "sb") && hasValue) {
         m_output->setSpaceBefore(value);
     } else if (controlWord == "sb") {
-        m_output->setSpaceAfter(0);
+        m_output->setSpaceBefore(0);
     } else if ((controlWord == "sa") && hasValue) {
         m_output->setSpaceAfter(value);
     } else if (controlWord == "sa") {

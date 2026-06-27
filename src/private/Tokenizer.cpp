@@ -44,8 +44,9 @@ void Tokenizer::pullControlSymbol(Token &token)
             hexDigits.append(QLatin1Char(highNibbleHexDigit));
             hexDigits.append(QLatin1Char(lowNibbleHexDigit));
             const uint codepoint = hexDigits.toUInt(nullptr, 16);
+            const quint8 byte = codepoint & 0xFFU;
             token.type = Plain;
-            token.name = QByteArray(1, codepoint);
+            token.name = QByteArray(1, static_cast<char>(byte));
         }
     } else if (token.name == "\\") {
         token.type = Plain;
@@ -112,7 +113,6 @@ Token Tokenizer::fetchToken()
             return token;
             break;
         case '\r':
-            break;
         case '\n':
             break;
         case '\\':
