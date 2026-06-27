@@ -44,6 +44,7 @@
 #include <QtAlgorithms>
 
 #include "qrtfreader_debug.h"
+#include <utility>
 
 namespace QRtfReader
 {
@@ -234,8 +235,8 @@ void ReaderPrivate::changeDestination(const QString &destinationName)
     m_destinationStack.push(dest);
     m_stateStack.top().didChangeDestination = true;
     QStringList destStackElementNames;
-    for (int i = 0; i < m_destinationStack.size(); ++i) {
-        destStackElementNames << m_destinationStack.at(i)->name();
+    for (Destination *i : std::as_const(m_destinationStack)) {
+        destStackElementNames << i->name();
     }
     qCDebug(lcRtf) << m_debugIndent << "destinationStack after changeDestination (" << destStackElementNames << ")";
 }
@@ -280,8 +281,8 @@ void ReaderPrivate::parseDocument(Tokenizer &tokenizer)
         }
         case CloseGroup: {
             QStringList destStackElementNames;
-            for (int i = 0; i < m_destinationStack.size(); ++i) {
-                destStackElementNames << m_destinationStack.at(i)->name();
+            for (Destination *i : std::as_const(m_destinationStack)) {
+                destStackElementNames << i->name();
             }
             // qCDebug(lcRtf) << m_debugIndent << "closegroup ( destinationStack:" << destStackElementNames << ")";
             m_debugIndent.remove(0, 1);
@@ -299,8 +300,8 @@ void ReaderPrivate::parseDocument(Tokenizer &tokenizer)
             }
 
             destStackElementNames.clear();
-            for (int i = 0; i < m_destinationStack.size(); ++i) {
-                destStackElementNames << m_destinationStack.at(i)->name();
+            for (Destination *i : std::as_const(m_destinationStack)) {
+                destStackElementNames << i->name();
             }
             // qCDebug(lcRtf) << m_debugIndent << "destinationStack after CloseGroup: (" << destStackElementNames << ")";
             nextSymbolMightBeDestination = true;

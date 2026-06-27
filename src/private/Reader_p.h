@@ -55,7 +55,7 @@ public:
     void changeDestination(const QString &destinationName);
 
     // Destination factory
-    Destination *makeDestination(const QString &destinationName) const;
+    [[nodiscard]] Destination *makeDestination(const QString &destinationName) const;
 
     /////////////////////////////////////////////////
     //

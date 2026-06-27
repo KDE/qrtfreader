@@ -9,13 +9,9 @@ namespace QRtfReader
 class QRTFREADER_EXPORT RtfGroupState
 {
 public:
-    RtfGroupState()
-        : didChangeDestination(false)
-        , endOfFile(false)
-    {
-    }
-    bool didChangeDestination;
-    bool endOfFile;
+    RtfGroupState() = default;
+    bool didChangeDestination = false;
+    bool endOfFile = false;
 };
 }
 
