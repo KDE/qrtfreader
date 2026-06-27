@@ -20,7 +20,8 @@ void Tokenizer::pullControlWord(Token &token)
     while (m_inputDevice->getChar(&next)) {
         if ((next == ' ') || (next == '\r') || (next == '\n')) {
             break;
-        } else if (isalpha(next)) {
+        }
+        if (isalpha(next)) {
             token.name.append(next);
         } else if (isdigit(next) || (next == '-')) {
             token.parameter.append(QLatin1Char(next));

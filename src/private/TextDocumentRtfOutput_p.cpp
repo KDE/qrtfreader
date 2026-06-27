@@ -33,7 +33,7 @@ TextDocumentRtfOutputPrivate::~TextDocumentRtfOutputPrivate()
     delete m_cursor;
 }
 
-qreal TextDocumentRtfOutputPrivate::pixelsFromTwips(const int twips) const
+qreal TextDocumentRtfOutputPrivate::pixelsFromTwips(const int twips)
 {
     const qreal inches = twips / 1440.0;
     const qreal pixels = inches * 96.0;

@@ -4,7 +4,6 @@
 #include "TextDocumentRtfOutput.h"
 #include "private/TextDocumentRtfOutput_p.h"
 
-#include "AbstractRtfOutput.h"
 #include "FontTableEntry.h"
 #include "StyleSheetTableEntry.h"
 
@@ -27,8 +26,7 @@
 namespace QRtfReader
 {
 TextDocumentRtfOutput::TextDocumentRtfOutput(QTextDocument *document)
-    : AbstractRtfOutput()
-    , d(new TextDocumentRtfOutputPrivate(document))
+    : d(new TextDocumentRtfOutputPrivate(document))
 {
 }
 
@@ -55,9 +53,9 @@ void TextDocumentRtfOutput::appendText(const QByteArray &text)
     d->m_cursor->insertText(this->convertText(text));
 }
 
-void TextDocumentRtfOutput::appendText(const QString &str)
+void TextDocumentRtfOutput::appendText(const QString &text)
 {
-    d->m_cursor->insertText(str);
+    d->m_cursor->insertText(text);
 }
 
 void TextDocumentRtfOutput::insertPar()

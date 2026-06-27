@@ -68,8 +68,9 @@ bool ReaderPrivate::open(const QString &filename)
 
 void ReaderPrivate::close()
 {
-    if (!m_inputDevice)
+    if (!m_inputDevice) {
         return;
+    }
     m_inputDevice->close();
     delete m_inputDevice;
     m_inputDevice = nullptr;
@@ -79,9 +80,9 @@ QString ReaderPrivate::fileName() const
 {
     if (m_inputDevice && m_inputDevice->exists()) {
         return m_inputDevice->fileName();
-    } else {
-        return QString();
     }
+
+    return QString();
 }
 
 bool ReaderPrivate::parseTo(AbstractRtfOutput *output)
@@ -145,53 +146,75 @@ bool ReaderPrivate::headerFormatIsKnown(const QString &tokenName, int tokenValue
     return true;
 }
 
-Destination *ReaderPrivate::makeDestination(const QString &destinationName)
+Destination *ReaderPrivate::makeDestination(const QString &destinationName) const
 {
     if (destinationName == QLatin1String("colortbl")) {
         return new ColorTableDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("creatim")) {
+    }
+    if (destinationName == QLatin1String("creatim")) {
         return new InfoCreatedTimeDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("printim")) {
+    }
+    if (destinationName == QLatin1String("printim")) {
         return new InfoPrintedTimeDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("revtim")) {
+    }
+    if (destinationName == QLatin1String("revtim")) {
         return new InfoRevisedTimeDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("author")) {
+    }
+    if (destinationName == QLatin1String("author")) {
         return new AuthorPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("company")) {
+    }
+    if (destinationName == QLatin1String("company")) {
         return new CompanyPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("operator")) {
+    }
+    if (destinationName == QLatin1String("operator")) {
         return new OperatorPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("comment")) {
+    }
+    if (destinationName == QLatin1String("comment")) {
         return new CommentPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("doccomm")) {
+    }
+    if (destinationName == QLatin1String("doccomm")) {
         return new DocumentCommentPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("title")) {
+    }
+    if (destinationName == QLatin1String("title")) {
         return new TitlePcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("subject")) {
+    }
+    if (destinationName == QLatin1String("subject")) {
         return new SubjectPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("manager")) {
+    }
+    if (destinationName == QLatin1String("manager")) {
         return new ManagerPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("category")) {
+    }
+    if (destinationName == QLatin1String("category")) {
         return new CategoryPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("keywords")) {
+    }
+    if (destinationName == QLatin1String("keywords")) {
         return new KeywordsPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("hlinkbase")) {
+    }
+    if (destinationName == QLatin1String("hlinkbase")) {
         return new HLinkBasePcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("generator")) {
+    }
+    if (destinationName == QLatin1String("generator")) {
         return new GeneratorPcdataDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("pict")) {
+    }
+    if (destinationName == QLatin1String("pict")) {
         return new PictDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("fonttbl")) {
+    }
+    if (destinationName == QLatin1String("fonttbl")) {
         return new FontTableDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("stylesheet")) {
+    }
+    if (destinationName == QLatin1String("stylesheet")) {
         return new StyleSheetDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("rtf")) {
+    }
+    if (destinationName == QLatin1String("rtf")) {
         return new DocumentDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("info")) {
+    }
+    if (destinationName == QLatin1String("info")) {
         return new InfoDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("userprops")) {
+    }
+    if (destinationName == QLatin1String("userprops")) {
         return new UserPropsDestination(m_output, destinationName);
-    } else if (destinationName == QLatin1String("ignorable")) {
+    }
+    if (destinationName == QLatin1String("ignorable")) {
         return new IgnoredDestination(m_output, destinationName);
     }
     qCDebug(lcRtf) << "creating plain old Destination for" << destinationName;

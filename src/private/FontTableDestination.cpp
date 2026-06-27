@@ -21,7 +21,7 @@ struct CharsetEntry {
     const char *name;
 };
 
-static constexpr CharsetEntry charsetToCodec[] = {
+constexpr CharsetEntry charsetToCodec[] = {
     {0, "Windows-1252"}, // ANSI
     {1, "Windows-1252"}, // Default
     {2, nullptr}, // Symbol,
@@ -46,7 +46,6 @@ static constexpr CharsetEntry charsetToCodec[] = {
     {238, "Windows-1250"}, // Eastern European
     {254, "IBM437"}, // PC 437
 };
-
 }
 
 namespace QRtfReader

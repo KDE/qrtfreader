@@ -43,7 +43,8 @@ void PcdataDestination::handlePlainText(const QByteArray &plainText)
         if (m_charactersToSkip >= plainText.size()) {
             m_charactersToSkip -= plainText.size();
             return;
-        } else if (plainText.size() > m_charactersToSkip) {
+        }
+        if (plainText.size() > m_charactersToSkip) {
             QByteArray partiallySkippedText(plainText);
             partiallySkippedText.remove(0, m_charactersToSkip);
             m_pcdata += m_output->convertText(partiallySkippedText);

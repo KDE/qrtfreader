@@ -31,7 +31,7 @@ public:
     /**
       Convenience routine to convert a size in twips into pixels
     */
-    [[nodiscard]] qreal pixelsFromTwips(int twips) const;
+    [[nodiscard]] static qreal pixelsFromTwips(int twips);
 
     /////////////////////////////////////////////////
     //

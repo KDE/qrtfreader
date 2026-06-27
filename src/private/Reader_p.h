@@ -43,10 +43,10 @@ public:
     void parseFile();
 
     // parse the file header section, including sanity checks
-    bool parseFileHeader(Tokenizer &tokenizer);
+    static bool parseFileHeader(Tokenizer &tokenizer);
 
     // check the file header for format / version compatibility
-    bool headerFormatIsKnown(const QString &tokenName, int tokenValue);
+    static bool headerFormatIsKnown(const QString &tokenName, int tokenValue);
 
     // parse the body of the document
     void parseDocument(Tokenizer &tokenizer);
@@ -55,7 +55,7 @@ public:
     void changeDestination(const QString &destinationName);
 
     // Destination factory
-    Destination *makeDestination(const QString &destinationName);
+    Destination *makeDestination(const QString &destinationName) const;
 
     /////////////////////////////////////////////////
     //
