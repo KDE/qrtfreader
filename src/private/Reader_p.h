@@ -4,6 +4,8 @@
 #ifndef RTFREADER_READER_P_H
 #define RTFREADER_READER_P_H
 
+#include "RtfGroupState_p.h"
+
 #include <QStack>
 #include <QString>
 
@@ -15,7 +17,6 @@ namespace QRtfReader
 {
 class AbstractRtfOutput;
 class Destination;
-class RtfGroupState;
 class Tokenizer;
 
 class QRTFREADER_EXPORT ReaderPrivate

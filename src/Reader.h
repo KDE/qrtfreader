@@ -15,9 +15,6 @@ namespace QRtfReader
 {
 class AbstractRtfOutput;
 class RtfProperty;
-class Destination;
-class RtfGroupState;
-class Tokenizer;
 
 class ReaderPrivate;
 /**
