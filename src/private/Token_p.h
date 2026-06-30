@@ -6,11 +6,12 @@
 
 #include <QByteArray>
 #include <QString>
+#include <QtTypes>
 
 #include "qrtfreader_export.h"
 namespace QRtfReader
 {
-enum TokenType {
+enum TokenType : quint8 {
     OpenGroup,
     CloseGroup,
     Control,

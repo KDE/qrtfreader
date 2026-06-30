@@ -7,10 +7,11 @@
 #include <QHash>
 #include <QSet>
 #include <QString>
+#include <QtTypes>
 
 using namespace Qt::Literals::StringLiterals;
 
-enum control_word_types {
+enum control_word_types : quint8 {
     Symbol,
     Flag,
     Value,

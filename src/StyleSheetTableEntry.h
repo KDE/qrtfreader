@@ -7,12 +7,13 @@
 #include <QSharedDataPointer>
 #include <QString>
 #include <Qt>
+#include <QtTypes>
 
 #include "qrtfreader_export.h"
 
 namespace QRtfReader
 {
-enum class TextAlignment {
+enum class TextAlignment : quint8 {
     LeftAligned,
     CentreAligned,
     RightAligned,

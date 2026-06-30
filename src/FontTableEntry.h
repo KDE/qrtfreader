@@ -6,12 +6,13 @@
 
 #include <QSharedDataPointer>
 #include <QString>
+#include <QtTypes>
 
 #include "qrtfreader_export.h"
 
 namespace QRtfReader
 {
-enum class FontFamily {
+enum class FontFamily : quint8 {
     Nil,
     Roman,
     Swiss,
@@ -22,7 +23,7 @@ enum class FontFamily {
     Bidi
 };
 
-enum class FontPitch {
+enum class FontPitch : quint8 {
     Default = 0,
     Fixed = 1,
     Variable = 2
