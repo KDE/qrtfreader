@@ -4,11 +4,12 @@
 #ifndef RTFREADER_READER_P_H
 #define RTFREADER_READER_P_H
 
-#include <QFile>
 #include <QStack>
 #include <QString>
 
 #include "qrtfreader_export.h"
+
+class QFile;
 
 namespace QRtfReader
 {

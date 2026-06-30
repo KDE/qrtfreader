@@ -7,11 +7,13 @@
 #include "Destination_p.h"
 #include "FontTableEntry.h"
 
-#include <QByteArray>
-#include <QString>
 #include <QtTypes>
 
 #include "qrtfreader_export.h"
+
+class QString;
+class QByteArray;
+
 namespace QRtfReader
 {
 class AbstractRtfOutput;

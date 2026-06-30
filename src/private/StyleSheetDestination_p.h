@@ -4,16 +4,16 @@
 #ifndef RTFREADER_STYLESHEETDESTINATION_P_H
 #define RTFREADER_STYLESHEETDESTINATION_P_H
 
+#include "Destination_p.h"
 #include "StyleSheetTableEntry.h"
 
-#include "Destination_p.h"
-
-#include <QByteArray>
-#include <QColor>
-#include <QString>
 #include <QtTypes>
 
 #include "qrtfreader_export.h"
+
+class QString;
+class QByteArray;
+
 namespace QRtfReader
 {
 class AbstractRtfOutput;

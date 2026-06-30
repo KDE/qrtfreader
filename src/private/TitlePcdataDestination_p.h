@@ -6,10 +6,10 @@
 
 #include "PcdataDestination_p.h"
 
-#include <QColor>
-#include <QString>
-
 #include "qrtfreader_export.h"
+
+class QString;
+
 namespace QRtfReader
 {
 class AbstractRtfOutput;

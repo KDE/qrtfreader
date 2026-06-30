@@ -6,9 +6,10 @@
 
 #include "InfoTimeDestination_p.h"
 
-#include <QString>
-
 #include "qrtfreader_export.h"
+
+class QString;
+
 namespace QRtfReader
 {
 class AbstractRtfOutput;

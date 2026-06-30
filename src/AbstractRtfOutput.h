@@ -7,16 +7,18 @@
 #include "FontTableEntry.h"
 #include "StyleSheetTableEntry.h"
 
-#include <QColor>
 #include <QDateTime>
 #include <QList>
 #include <QScopedPointer>
 #include <QString>
-#include <QTextImageFormat>
 #include <QVariant>
 #include <QtTypes>
 
 #include "qrtfreader_export.h"
+
+class QColor;
+class QTextImageFormat;
+
 /**
    Namespace for the public interface for the QRtfReader classes
 */

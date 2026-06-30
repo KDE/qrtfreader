@@ -5,6 +5,7 @@
 
 #include "Token_p.h"
 
+#include <QFile>
 #include <QLoggingCategory>
 #include <QString>
 #include <QtTypes>

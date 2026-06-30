@@ -6,11 +6,13 @@
 
 #include "Destination_p.h"
 
-#include <QByteArray>
 #include <QColor>
-#include <QString>
 
 #include "qrtfreader_export.h"
+
+class QString;
+class QByteArray;
+
 namespace QRtfReader
 {
 class AbstractRtfOutput;

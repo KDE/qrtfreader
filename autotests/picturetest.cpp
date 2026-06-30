@@ -8,6 +8,7 @@
 #include "qrtfreadertestsconfig.h"
 
 #include <QTest>
+#include <QTextDocument>
 
 #include "Reader.h"
 #include "TextDocumentRtfOutput.h"

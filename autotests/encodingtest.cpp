@@ -8,6 +8,7 @@
 
 #include <QObject>
 #include <QTest>
+#include <QTextDocument>
 
 #include "Reader.h"
 #include "TextDocumentRtfOutput.h"

@@ -9,8 +9,6 @@
 #include "FontTableEntry.h"
 #include "StyleSheetTableEntry.h"
 
-#include <QByteArray>
-#include <QColor>
 #include <QScopedPointer>
 #include <QString>
 #include <QtTypes>
@@ -21,6 +19,8 @@ class QImage;
 class QTextCursor;
 class QTextDocument;
 class QTextImageFormat;
+class QByteArray;
+class QColor;
 
 namespace QRtfReader
 {
