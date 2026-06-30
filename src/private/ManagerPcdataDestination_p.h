@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2010 Brad Hards <bradh@frogmouth.net>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
-#ifndef RTFREADER_MANAGERPCDATADESTINATION_H
-#define RTFREADER_MANAGERPCDATADESTINATION_H
+#ifndef RTFREADER_MANAGERPCDATADESTINATION_P_H
+#define RTFREADER_MANAGERPCDATADESTINATION_P_H
 
 #include "PcdataDestination_p.h"
 

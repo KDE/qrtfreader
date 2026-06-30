@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2010 Brad Hards <bradh@frogmouth.net>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
-#ifndef RTFREADER_TOKENIZER_H
-#define RTFREADER_TOKENIZER_H
+#ifndef RTFREADER_TOKENIZER_P_H
+#define RTFREADER_TOKENIZER_P_H
 
 #include "Token_p.h"
 

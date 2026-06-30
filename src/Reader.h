@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2008, 2010 Brad Hards <bradh@frogmouth.net>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
-#ifndef RTFREADER_H
-#define RTFREADER_H
+#ifndef RTFREADER_READER_H
+#define RTFREADER_READER_H
 
 #include <QDebug>
 #include <QObject>

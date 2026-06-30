@@ -1,7 +1,8 @@
 // SPDX-FileCopyrightText: 2008 Brad Hards <bradh@frogmouth.net>
 // SPDX-License-Identifier: BSD-2-Clause
 
-#pragma once
+#ifndef RTFREADER_CONTROLWORD_P_H
+#define RTFREADER_CONTROLWORD_P_H
 
 #include <QString>
 
@@ -40,3 +41,5 @@ private:
 };
 
 }
+
+#endif
