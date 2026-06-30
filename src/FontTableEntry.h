@@ -20,13 +20,13 @@ enum class FontFamily : quint8 {
     Script,
     Decor,
     Tech,
-    Bidi
+    Bidi,
 };
 
 enum class FontPitch : quint8 {
     Default = 0,
     Fixed = 1,
-    Variable = 2
+    Variable = 2,
 };
 class FontTableEntryPrivate;
 class QRTFREADER_EXPORT FontTableEntry

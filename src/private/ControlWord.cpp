@@ -16,7 +16,7 @@ enum control_word_types : quint8 {
     Flag,
     Value,
     Toggle,
-    Destination
+    Destination,
 };
 
 using KnownControlWordsTable = QHash<QString, control_word_types>;

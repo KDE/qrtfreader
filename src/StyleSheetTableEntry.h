@@ -18,7 +18,7 @@ enum class TextAlignment : quint8 {
     CentreAligned,
     RightAligned,
     Justified,
-    Distributed
+    Distributed,
 };
 class StyleSheetTableEntryPrivate;
 class QRTFREADER_EXPORT StyleSheetTableEntry

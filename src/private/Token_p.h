@@ -17,7 +17,7 @@ enum TokenType : quint8 {
     Control,
     Plain,
     Binary,
-    Invalid
+    Invalid,
 };
 
 /**
