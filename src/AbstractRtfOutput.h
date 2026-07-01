@@ -26,7 +26,7 @@ namespace QRtfReader
 {
 class AbstractRtfOutputPrivate;
 /**
-Abstract output strategy for RTF Parser
+  Abstract output strategy for RTF Parser
 */
 class QRTFREADER_EXPORT AbstractRtfOutput
 {
@@ -244,58 +244,279 @@ public:
     [[nodiscard]] virtual int internalVersionNumber() const;
     virtual void setInternalVersionNumber(int internalVersionNumber);
 
+    /**
+      Custom user property for this document (from the document metadata)
+
+      \param propertyName the name of the custom user property
+
+      \note This may not be valid - applications may not set this,
+      or it may be set to something silly.
+    */
     [[nodiscard]] QVariant userProp(const QString &propertyName) const;
     [[nodiscard]] QList<QString> userPropNames() const;
     void addUserProp(const QString &propertyName, const QVariant &propertyValue);
 
-    // TODO: consider adding default implementation for this
+    /**
+      Convert text from the encoding specified in an RTF document for content and metadata.
+
+      \param text the text to be converted
+
+      TODO: consider adding default implementation for this
+    */
     [[nodiscard]] virtual QString convertText(const QByteArray &text) const = 0;
+
+    /**
+      Append text to the output.
+
+      \param text the text to be appended
+
+      \note The passed text will be converted before appending it.
+    */
     virtual void appendText(const QByteArray &text) = 0;
+
+    /**
+      Append text to the output.
+
+      \param text the text to be appended
+    */
     virtual void appendText(const QString &text) = 0;
+
+    /**
+      Insert a paragraph (block).
+    */
     virtual void insertPar() = 0;
+
+    /**
+      Insert a tab.
+    */
     virtual void insertTab() = 0;
+
+    /**
+      Insert the left single quotation mark.
+    */
     virtual void insertLeftQuote() = 0;
+
+    /**
+      Insert the right single quotation mark.
+    */
     virtual void insertRightQuote() = 0;
+
+    /**
+      Insert the right double quotation mark.
+    */
     virtual void insertLeftDoubleQuote() = 0;
+
+    /**
+      Insert the right double quotation mark.
+    */
     virtual void insertRightDoubleQuote() = 0;
+
+    /**
+      Insert the En Dash character.
+    */
     virtual void insertEnDash() = 0;
+
+    /**
+      Insert the Em Dash character.
+    */
     virtual void insertEmDash() = 0;
+
+    /**
+      Insert the En Space character.
+    */
     virtual void insertEnSpace() = 0;
+
+    /**
+      Insert the Em Space character.
+    */
     virtual void insertEmSpace() = 0;
+
+    /**
+      Insert the Bullet character.
+    */
     virtual void insertBullet() = 0;
+
+    /**
+      Reset the paragraph formatting (alignment, indentation, margins).
+    */
     virtual void resetParagraphFormat() = 0;
+
+    /**
+      Set the paragraph alignment to the left.
+    */
     virtual void setParagraphAlignmentLeft() = 0;
+
+    /**
+      Set the paragraph alignment to the center.
+    */
     virtual void setParagraphAlignmentCentred() = 0;
+
+    /**
+      Set the paragraph text justified.
+    */
     virtual void setParagraphAlignmentJustified() = 0;
+
+    /**
+      Set the paragraph justified alignment to the right.
+    */
     virtual void setParagraphAlignmentRight() = 0;
+
+    /**
+      Set the indentation of the first line.
+    */
     virtual void setFirstLineIndent(int twips) = 0;
+
+    /**
+      Set the margin to the left.
+    */
     virtual void setLeftIndent(int twips) = 0;
+
+    /**
+      Set the margin to the right.
+    */
     virtual void setRightIndent(int twips) = 0;
+
+    /**
+      Set the italic font.
+    */
     virtual void setFontItalic(int value) = 0;
+
+    /**
+      Set the bold font.
+    */
     virtual void setFontBold(int value) = 0;
+
+    /**
+      Set the font underline.
+    */
     virtual void setFontUnderline(int value) = 0;
+
+    /**
+      Set the font size.
+    */
     virtual void setFontPointSize(int value) = 0;
+
+    /**
+      Set the font's superscript.
+    */
     virtual void setFontSuperscript() = 0;
+
+    /**
+      Set the font's subscript.
+    */
     virtual void setFontSubscript() = 0;
+
+    /**
+      Set the font's strikeout.
+    */
     virtual void setFontStrikeout(bool value) = 0;
+
+    /**
+      Set the foreground color.
+    */
     virtual void setForegroundColour(int value) = 0;
+
+    /**
+      Set the highlight color.
+    */
     virtual void setHighlightColour(int value) = 0;
+
+    /**
+      Set the background pattern color of the paragraph.
+    */
     virtual void setParagraphPatternBackgroundColour(int value) = 0;
+
+    /**
+      Set the font by font index from the font table.
+
+      \sa FontTableEntry
+    */
     virtual void setFont(int fontIndex) = 0;
+
+    /**
+      Set the default font by font index from the font table.
+
+      \sa FontTableEntry
+    */
     virtual void setDefaultFont(int fontIndex) = 0;
+
+    /**
+      Set the text Direction from Left to Right.
+    */
     virtual void setTextDirectionLeftToRight() = 0;
+
+    /**
+      Set the text Direction from Right to Left.
+    */
     virtual void setTextDirectionRightToLeft() = 0;
+
+    /**
+      Reset character properties (size, weight, italic, underline).
+    */
     virtual void resetCharacterProperties() = 0;
+
+    /**
+      Create and insert image to the output.
+
+      \param data binary image data
+
+      \param format format for image (name, width, height)
+    */
     virtual void createImage(const QByteArray &data, const QTextImageFormat &format) = 0;
+
+    /**
+      Set the page height.
+    */
     virtual void setPageHeight(int pageHeight) = 0;
+
+    /**
+      Set the page width.
+    */
     virtual void setPageWidth(int pageWidth) = 0;
+
+    /**
+      Set the margin to the top.
+    */
     virtual void setSpaceBefore(int value) = 0;
+
+    /**
+      Set the margin to the bottom.
+    */
     virtual void setSpaceAfter(int value) = 0;
+
+    /**
+      Append to the color table.
+
+      \param colour color
+    */
     virtual void appendToColourTable(const QColor &colour) = 0;
+
+    /**
+      Insert an entry into the font table.
+
+      \param fontTableEntry entry, managed by the document's control word
+
+      \param fontTableIndex index, specified by the document's control word
+    */
     virtual void insertFontTableEntry(FontTableEntry fontTableEntry, quint32 fontTableIndex) = 0;
+
+    /**
+      Insert an entry into the style sheet table.
+
+      \param stylesheetTableIndex index, specified by the document's control word
+
+      \param stylesheetTableEntry entry, managed by the document's control word
+    */
     virtual void insertStyleSheetTableEntry(quint32 stylesheetTableIndex, StyleSheetTableEntry stylesheetTableEntry) = 0;
 
+    /**
+      Start a group (in RTF group starts with a '{' character).
+    */
     virtual void startGroup();
+
+    /**
+      Close a group (in RTF group ends with a '}' character).
+    */
     virtual void endGroup();
 
 private:

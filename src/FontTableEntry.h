@@ -10,6 +10,9 @@
 
 #include "qrtfreader_export.h"
 
+/**
+   Namespace for the public interface for the QRtfReader classes
+*/
 namespace QRtfReader
 {
 enum class FontFamily : quint8 {
@@ -29,6 +32,9 @@ enum class FontPitch : quint8 {
     Variable = 2,
 };
 class FontTableEntryPrivate;
+/**
+   Entry in the font table
+*/
 class QRTFREADER_EXPORT FontTableEntry
 {
 public:
@@ -38,15 +44,27 @@ public:
 
     FontTableEntry &operator=(const FontTableEntry &);
 
+    /**
+      Font family.
+    */
     [[nodiscard]] FontFamily fontFamily() const;
     void setFontFamily(FontFamily fontFamily);
 
+    /**
+      Font pitch (fprq).
+    */
     [[nodiscard]] FontPitch fontPitch() const;
     void setFontPitch(FontPitch fontPitch);
 
+    /**
+      Font name.
+    */
     [[nodiscard]] QString fontName() const;
     void setFontName(const QString &fontName);
 
+    /**
+      Text encoding (fcharset).
+    */
     [[nodiscard]] QString encoding() const;
     void setEncoding(const QString &encoding);
 
