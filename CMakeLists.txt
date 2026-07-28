@@ -1,5 +1,5 @@
 #
-#   SPDX-FileCopyrightText: 2010 Brad Hards <bradh@frogmouth.net>    
+#   SPDX-FileCopyrightText: 2010 Brad Hards <bradh@frogmouth.net>
 #   SPDX-FileCopyrightText: 2026 Sergey Katunin <sulmpx60@yandex.ru>
 #
 #   SPDX-License-Identifier: BSD-2-Clause
@@ -7,7 +7,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(QRtfReader VERSION 0.2.0)
+project(QRtfReader VERSION 1.0.0)
 
 set(REQUIRED_KF6_VERSION "6.0.0")
 set(REQUIRED_QT_VERSION 6.5.0)
@@ -41,7 +41,7 @@ ecm_setup_version(PROJECT
     VARIABLE_PREFIX QRTFREADER
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/qrtfreader_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/${CMAKECONFIG_NAME}ConfigVersion.cmake"
-    SOVERSION 0
+    SOVERSION ${PROJECT_VERSION_MAJOR}
 )
 
 find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED Core Gui)
