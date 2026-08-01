@@ -134,15 +134,18 @@ ecm_generate_headers(QRtfReader_HEADERS
                  AbstractRtfOutput
                  FontTableEntry
                  StyleSheetTableEntry
+
+    PREFIX QRtfReader
     REQUIRED_HEADERS QRtfReader_HEADERS
 )
 
 install(TARGETS QRtfReader EXPORT QRtfReaderTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
+install(FILES ${QRtfReader_HEADERS} DESTINATION ${KDE_INSTALL_INCLUDEDIR}/QRtfReader/QRtfReader COMPONENT Devel)
+
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/qrtfreader_export.h
     ${CMAKE_CURRENT_BINARY_DIR}/qrtfreader_version.h
-    ${QRtfReader_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/QRtfReader COMPONENT Devel
 )
 
