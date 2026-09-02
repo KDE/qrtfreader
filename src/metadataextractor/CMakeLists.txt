@@ -5,7 +5,8 @@ add_library(kfilemetadata_rtfextractor MODULE rtfextractor.cpp)
 
 target_link_libraries(kfilemetadata_rtfextractor
     KF6::FileMetaData
-    Qt::Gui
+    Qt6::Core
+    Qt6::Gui
     QRtfReader
 )
 
