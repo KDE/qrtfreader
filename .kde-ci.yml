@@ -6,6 +6,10 @@ Dependencies:
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
 
+- 'on': ['Linux', 'FreeBSD']
+  'require':
+    'frameworks/kfilemetadata': '@latest-kf6'
+
 Options:
   test-before-installing: True
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]

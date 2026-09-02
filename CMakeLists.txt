@@ -46,6 +46,8 @@ ecm_setup_version(PROJECT
 
 find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED Core Gui)
 
+find_package(KF6 ${REQUIRED_KF6_VERSION} OPTIONAL_COMPONENTS FileMetaData)
+
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/${CMAKECONFIG_NAME}")
 
 include(CMakePackageConfigHelpers)
@@ -57,9 +59,14 @@ configure_package_config_file(
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
+if (BUILD_TESTING)
+    find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
+endif()
+
 add_subdirectory(src)
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
+
 

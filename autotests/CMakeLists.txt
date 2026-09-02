@@ -4,8 +4,6 @@
 #   SPDX-License-Identifier: BSD-2-Clause
 #
 
-find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
-
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 configure_file(qrtfreadertestsconfig.h.in

@@ -1,0 +1,7 @@
+{
+    "Name" : "RtfExtractor",
+    "Id" :   "org.kde.rtfextractor",
+    "MimeTypes" : {
+        "application/rtf" : { "Version" : "0.0" }
+    }
+}
