@@ -62,6 +62,11 @@ void RtfExtractor::parseMetaData(const QRtfReader::TextDocumentRtfOutput &output
         result->add(Property::Subject, subject);
     }
 
+    const QString comment = output.comment();
+    if (!comment.isEmpty()) {
+        result->add(Property::Comment, comment);
+    }
+
     const QString description = output.documentComment();
     if (!description.isEmpty()) {
         result->add(Property::Description, description);
