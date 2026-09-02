@@ -17,7 +17,7 @@ namespace KFileMetaData
 class RtfExtractor : public ExtractorPlugin
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.kde.kf5.kfilemetadata.ExtractorPlugin" FILE "rtfextractor.json")
+    Q_PLUGIN_METADATA(IID kfilemetadata_extractor_iid FILE "rtfextractor.json")
     Q_INTERFACES(KFileMetaData::ExtractorPlugin)
 
 public:
