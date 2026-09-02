@@ -4,10 +4,11 @@
 #include "rtfextractor.h"
 
 #include <QDebug>
-#include <QRtfReader/Reader>
-#include <QRtfReader/TextDocumentRtfOutput>
 #include <QTextBlock>
 #include <QTextDocument>
+
+#include <QRtfReader/Reader>
+#include <QRtfReader/TextDocumentRtfOutput>
 
 using namespace KFileMetaData;
 using namespace Qt::StringLiterals;
