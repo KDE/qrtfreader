@@ -84,7 +84,7 @@ void RtfExtractor::parseMetaData(const QRtfReader::TextDocumentRtfOutput &output
     }
 
     const QDateTime creationDate = output.created();
-    if (!creationDate.isNull()) {
+    if (creationDate.isValid()) {
         result->add(Property::CreationDate, creationDate);
     }
 
