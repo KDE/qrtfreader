@@ -26,7 +26,7 @@ private Q_SLOTS:
     void testLibreOffice();
     void testLibreOfficeCyrillic();
 
-    void testWin1251Text();
+    void testUnicodeFileWithWin1251Text();
 
     void testWin1251Cyrillic_data();
     void testWin1251Cyrillic();
@@ -43,17 +43,33 @@ private:
 
 QString RtfExtractorTest::testFilePath(const QString &fileName) const
 {
-    return QLatin1String(TESTS_SAMPLE_FILES_PATH) + QLatin1Char('/') + fileName;
+    return QStringLiteral(TESTS_SAMPLE_FILES_PATH) + QLatin1Char('/') + fileName;
 }
 
+/**
+    Three types of RTF documents is supported:
+
+    Type A: the document is saved in UTF-8, the non-latin text is encoded
+    using character escaping \u???? in a non-standard representation
+    of UTF-16 encoding. For example, this is how LibreOffice saves it.
+
+    Type B: the document is saved in UTF-8, the non-latin text is encoded
+    using character escaping \'?? in non-unicode encoding (like windows-1251).
+    For example, this is how Word or WordPad save it.
+
+    Type C: the document is saved in non-unicode encoding (like windows-1251),
+    the text is encoded directly in the form of Cyrillic
+    (for windows-1251 case) characters.
+*/
 void RtfExtractorTest::testNoExtraction_data()
 {
     QTest::addColumn<QString>("fileName");
 
-    QTest::newRow("libreoffice file with unicode latin text") << QStringLiteral("test_libreoffice.rtf");
-    QTest::newRow("libreoffice file with unicode cyrillic text") << QStringLiteral("test_libreoffice_cyrillic.rtf");
-    QTest::newRow("unicode file with win-1251 latin text") << QStringLiteral("test_win1251_text.rtf");
-    QTest::newRow("unicode file with win-1251 cyrillic text") << QStringLiteral("test_win1251_text_cyrillic.rtf");
+    QTest::newRow("libreoffice file with unicode latin text (Type A)") << QStringLiteral("test_libreoffice.rtf");
+    QTest::newRow("libreoffice file with unicode cyrillic text (Type A)") << QStringLiteral("test_libreoffice_cyrillic.rtf");
+    QTest::newRow("unicode file with win-1251 latin text (Type B)") << QStringLiteral("test_win1251_text.rtf");
+    QTest::newRow("unicode file with win-1251 cyrillic text (Type B)") << QStringLiteral("test_win1251_text_cyrillic.rtf");
+    QTest::newRow("win1251 file with win-1251 cyrillic text (Type C)") << QStringLiteral("test_win1251_file_cyrillic.rtf");
 }
 
 void RtfExtractorTest::testNoExtraction()
@@ -128,7 +144,7 @@ void RtfExtractorTest::testLibreOfficeCyrillic()
     QCOMPARE(result.properties().size(), 6);
 }
 
-void RtfExtractorTest::testWin1251Text()
+void RtfExtractorTest::testUnicodeFileWithWin1251Text()
 {
     RtfExtractor plugin{this};
 
@@ -148,7 +164,6 @@ void RtfExtractorTest::testWin1251Text()
     QCOMPARE(result.properties().value(Property::Keywords), QVariant(QStringLiteral("KFileMetaData keyword")));
     QCOMPARE(result.properties().value(Property::Description), QVariant(QStringLiteral("KFileMetaData description")));
 
-    // TODO: 1
     QDateTime dt(QDate(2024, 02, 14), QTime(17, 51, 00, 000));
     QCOMPARE(result.properties().value(Property::CreationDate), QVariant(dt));
 
@@ -163,8 +178,8 @@ void RtfExtractorTest::testWin1251Cyrillic_data()
 {
     QTest::addColumn<QString>("fileName");
 
-    QTest::newRow("unicode file with win-1251 cyrillic text") << QStringLiteral("test_win1251_text_cyrillic.rtf");
-    QTest::newRow("file with windows-1251 encoding and cyrillic text") << QStringLiteral("test_win1251_file_cyrillic.rtf");
+    QTest::newRow("unicode file with win-1251 cyrillic text (Type B)") << QStringLiteral("test_win1251_text_cyrillic.rtf");
+    QTest::newRow("file with windows-1251 encoding and cyrillic text (Type C)") << QStringLiteral("test_win1251_file_cyrillic.rtf");
 }
 
 void RtfExtractorTest::testWin1251Cyrillic()
@@ -189,7 +204,6 @@ void RtfExtractorTest::testWin1251Cyrillic()
     QCOMPARE(result.properties().value(Property::Keywords), QVariant(QStringLiteral("KFileMetaData теги")));
     QCOMPARE(result.properties().value(Property::Description), QVariant(QStringLiteral("KFileMetaData описание")));
 
-    // TODO: 2
     QDateTime dt(QDate(2024, 02, 14), QTime(17, 52, 00, 000));
     QCOMPARE(result.properties().value(Property::CreationDate), QVariant(dt));
 
